@@ -1,6 +1,9 @@
+/* eslint-disable */
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
+
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,73 +24,61 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-          <meta charSet="UTF-8" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
-          />
-          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-          <title>
-            {" "}
-            Nowa - Bootstrap 5 Premium Admin &amp; Dashboard Template{" "}
-          </title>
-          <meta
-            name="Description"
-            content="Bootstrap Responsive Admin Web Dashboard HTML5 Template"
-          />
-          <meta name="Author" content="Spruko Technologies Private Limited" />
-          <meta
-            name="keywords"
-            content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit."
-          />
-          {/* Favicon */}
-          <link
-            rel="icon"
-            href="../assets/images/brand-logos/favicon.ico"
-            type="image/x-icon"
-          />
-          {/* Bootstrap Css */}
-          <link
-            id="style"
-            href="assets/libs/bootstrap/css/bootstrap.min.css"
-            rel="stylesheet"
-          />
-          {/* Style Css */}
-          <link href="assets/css/styles.min.css" rel="stylesheet" />
-          {/* Icons Css */}
-          <link href="../assets/css/icons.css" rel="stylesheet" />
-          {/* Node Waves Css */}
-          <link
-            href=".assets/libs/node-waves/waves.min.css"
-            rel="stylesheet"
-          />
-          {/* Simplebar Css */}
-          <link
-            href="assets/libs/simplebar/simplebar.min.css"
-            rel="stylesheet"
-          />
-          {/* Color Picker Css */}
-          <link
-            rel="stylesheet"
-            href="assets/libs/flatpickr/flatpickr.min.css"
-          />
-          <link
-            rel="stylesheet"
-            href="assets/libs/@simonwep/pickr/themes/nano.min.css"
-          />
-          {/* Choices Css */}
-          <link
-            rel="stylesheet"
-            href="assets/libs/choices.js/public/assets/styles/choices.min.css"
-          />
-          <link
-            rel="stylesheet"
-            href="assets/libs/jsvectormap/css/jsvectormap.min.css"
-          />
-          <link
-            rel="stylesheet"
-            href="assets/libs/swiper/swiper-bundle.min.css"
-          />
+        <meta charSet="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+        <title>
+          {" "}
+          Nowa - Bootstrap 5 Premium Admin &amp; Dashboard Template{" "}
+        </title>
+        <meta
+          name="Description"
+          content="Bootstrap Responsive Admin Web Dashboard HTML5 Template"
+        />
+        <meta name="Author" content="Spruko Technologies Private Limited" />
+        <meta
+          name="keywords"
+          content="admin,admin dashboard,admin panel,admin template,bootstrap,clean,dashboard,flat,jquery,modern,responsive,premium admin templates,responsive admin,ui,ui kit."
+        />
+        {/* Favicon */}
+        <link
+          rel="icon"
+          href="../assets/images/brand-logos/favicon.ico"
+          type="image/x-icon"
+        />
+        {/* Bootstrap Css */}
+        <link
+          id="style"
+          href="assets/libs/bootstrap/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        {/* Style Css */}
+        <link href="assets/css/styles.min.css" rel="stylesheet" />
+        {/* Icons Css */}
+        <link href="../assets/css/icons.css" rel="stylesheet" />
+        {/* Node Waves Css */}
+        <link href=".assets/libs/node-waves/waves.min.css" rel="stylesheet" />
+        {/* Simplebar Css */}
+        <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet" />
+        {/* Color Picker Css */}
+        <link rel="stylesheet" href="assets/libs/flatpickr/flatpickr.min.css" />
+        <link
+          rel="stylesheet"
+          href="assets/libs/@simonwep/pickr/themes/nano.min.css"
+        />
+        {/* Choices Css */}
+        <link
+          rel="stylesheet"
+          href="assets/libs/choices.js/public/assets/styles/choices.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="assets/libs/jsvectormap/css/jsvectormap.min.css"
+        />
+        <link
+          rel="stylesheet"
+          href="assets/libs/swiper/swiper-bundle.min.css"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -96,50 +87,47 @@ export default function RootLayout({ children }) {
         <Script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></Script>
         <Script src="assets/js/main.js"></Script>
         {/* <!-- Popper JS --> */}
-    <Script src="../assets/libs/@popperjs/core/umd/popper.min.js"></Script>
+        <Script src="../assets/libs/@popperjs/core/umd/popper.min.js"></Script>
 
-    {/* <!-- Bootstrap JS --> */}
-    <Script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></Script>
+        {/* <!-- Bootstrap JS --> */}
+        <Script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></Script>
 
-    {/* <!-- Defaultmenu JS --> */}
-    <Script src="../assets/js/defaultmenu.min.js"></Script>
+        {/* <!-- Defaultmenu JS --> */}
+        <Script src="../assets/js/defaultmenu.min.js"></Script>
 
-    {/* <!-- Node Waves JS--> */}
-    <Script src="../assets/libs/node-waves/waves.min.js"></Script>
+        {/* <!-- Node Waves JS--> */}
+        <Script src="../assets/libs/node-waves/waves.min.js"></Script>
 
-    {/* <!-- Sticky JS --> */}
-    <Script src="../assets/js/sticky.js"></Script>
+        {/* <!-- Sticky JS --> */}
+        <Script src="../assets/js/sticky.js"></Script>
 
-    {/* <!-- Simplebar JS --> */}
-    <Script src="../assets/libs/simplebar/simplebar.min.js"></Script>
-    <Script src="../assets/js/simplebar.js"></Script>
+        {/* <!-- Simplebar JS --> */}
+        <Script src="../assets/libs/simplebar/simplebar.min.js"></Script>
+        <Script src="../assets/js/simplebar.js"></Script>
 
-    {/* <!-- Color Picker JS --> */}
-    <Script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></Script>
+        {/* <!-- Color Picker JS --> */}
+        <Script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></Script>
 
-  
+        {/* <!-- JSVector Maps JS --> */}
+        <Script src="../assets/libs/jsvectormap/js/jsvectormap.min.js"></Script>
 
-    {/* <!-- JSVector Maps JS --> */}
-    <Script src="../assets/libs/jsvectormap/js/jsvectormap.min.js"></Script>
+        {/* <!-- JSVector Maps MapsJS --> */}
+        <Script src="../assets/libs/jsvectormap/maps/world-merc.js"></Script>
 
-    {/* <!-- JSVector Maps MapsJS --> */}
-    <Script src="../assets/libs/jsvectormap/maps/world-merc.js"></Script>
+        {/* <!-- Apex Charts JS --> */}
+        <Script src="../assets/libs/apexcharts/apexcharts.min.js"></Script>
 
-    {/* <!-- Apex Charts JS --> */}
-    <Script src="../assets/libs/apexcharts/apexcharts.min.js"></Script>
+        {/* <!-- Chartjs Chart JS --> */}
+        <Script src="../assets/libs/chart.js/chart.min.js"></Script>
 
-    {/* <!-- Chartjs Chart JS --> */}
-    <Script src="../assets/libs/chart.js/chart.min.js"></Script>
+        {/* <!-- Index Js --> */}
+        <Script src="../assets/js/index.js"></Script>
 
-    {/* <!-- Index Js --> */}
-    <Script src="../assets/js/index.js"></Script>
+        {/* <!-- Custom-Switcher JS --> */}
+        <Script src="../assets/js/custom-switcher.min.js"></Script>
 
-    
-    {/* <!-- Custom-Switcher JS --> */}
-    <Script src="../assets/js/custom-switcher.min.js"></Script>
-
-    {/* <!-- Custom JS --> */}
-    <Script src="../assets/js/custom.js"></Script>
+        {/* <!-- Custom JS --> */}
+        <Script src="../assets/js/custom.js"></Script>
       </body>
     </html>
   );
