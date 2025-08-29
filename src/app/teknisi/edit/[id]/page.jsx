@@ -7,10 +7,10 @@ export default function EditTeknisi() {
   const router = useRouter();
   const params = useParams();
   const id = params.id;
-  
+
   const [formData, setFormData] = useState({
     nama: "",
-    jurusan: ""
+    jurusan: "",
   });
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState("");
@@ -21,28 +21,25 @@ export default function EditTeknisi() {
     const fetchTeknisiData = async () => {
       try {
         const token = localStorage.getItem("token");
-        
+
         if (!token) {
           setError("Anda harus login terlebih dahulu");
           return;
         }
 
-        const response = await fetch(
-          `https://web-production-dbd6b.up.railway.app/teknisi/${id}`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: `Bearer ${token}`,
-            },
-          }
-        );
+        const response = await fetch(`/api/tampil/${id}`, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        });
 
         if (response.ok) {
           const data = await response.json();
           setFormData({
             nama: data.nama || "",
-            jurusan: data.jurusan || ""
+            jurusan: data.jurusan || "",
           });
           setIsDataLoaded(true);
         } else {
@@ -62,7 +59,7 @@ export default function EditTeknisi() {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -73,7 +70,7 @@ export default function EditTeknisi() {
 
     try {
       const token = localStorage.getItem("token");
-      
+
       if (!token) {
         setError("Anda harus login terlebih dahulu");
         setIsLoading(false);
@@ -84,14 +81,14 @@ export default function EditTeknisi() {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
-          "Authorization": `Bearer ${token}`
+          Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         alert("Data teknisi berhasil diupdate!");
-        router.push("/teknisi"); // Ganti dengan halaman daftar teknisi
+        router.push("/"); // Ganti dengan halaman daftar teknisi
       } else {
         const errorData = await response.json();
         setError(errorData.message || "Gagal mengupdate data");
@@ -104,17 +101,13 @@ export default function EditTeknisi() {
     }
   };
 
-  if (!isDataLoaded) {
+  if (error) {
     return (
-      <div className="container mt-5">
-        <div className="row justify-content-center">
-          <div className="col-md-6 text-center">
-            <div className="spinner-border text-primary" role="status">
-              <span className="visually-hidden">Loading...</span>
-            </div>
-            <p className="mt-2">Memuat data...</p>
-          </div>
-        </div>
+      <div className="container mt-5 text-center">
+        <div className="alert alert-danger">{error}</div>
+        <button className="btn btn-secondary" onClick={() => router.back()}>
+          Kembali
+        </button>
       </div>
     );
   }

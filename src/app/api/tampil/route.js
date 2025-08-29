@@ -1,48 +1,67 @@
-import { NextResponse } from "next/server";
+// src/app/api/tampil/route.js
+import { NextResponse } from 'next/server';
 
-export async function GET(req) {
+export async function GET(request) {
   try {
-    // Ambil token dari header request (Authorization)
-    const authHeader = req.headers.get("authorization");
-    if (!authHeader || !authHeader.startsWith("Bearer ")) {
-      return NextResponse.json(
-        { message: "Token tidak ditemukan atau invalid" },
-        { status: 401 }
-      );
+    const authHeader = request.headers.get('authorization');
+    
+    if (!authHeader) {
+      return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
     }
 
-    const token = authHeader.split(" ")[1];
-
-    // Panggil API eksternal /teknisi
-    const res = await fetch("https://web-production-dbd6b.up.railway.app/teknisi", {
-      method: "GET",
+    const response = await fetch('https://web-production-dbd6b.up.railway.app/teknisi', {
       headers: {
-        "Content-Type": "application/json",
-        "Authorization": `Bearer ${token}`, // kirim token ke API
-      },
-      cache: "no-store", // biar selalu fresh
+        'Authorization': authHeader
+      }
     });
 
-    if (!res.ok) {
+    if (!response.ok) {
       return NextResponse.json(
-        { message: "Gagal mengambil data dari API eksternal" },
-        { status: res.status }
+        { message: 'Failed to fetch data' }, 
+        { status: response.status }
       );
     }
 
-    const data = await res.json();
-
-    // Hanya ambil field nama & jurusan
-    const teknisi = data.map((item, index) => ({
-      no: index + 1,
-      nama: item.nama,
-      jurusan: item.jurusan,
-    }));
-
-    return NextResponse.json(teknisi, { status: 200 });
-  } catch (err) {
+    const data = await response.json();
+    return NextResponse.json(data, { status: 200 });
+  } catch (error) {
     return NextResponse.json(
-      { message: "Terjadi error", error: err.message },
+      { message: 'Internal Server Error' }, 
+      { status: 500 }
+    );
+  }
+}
+
+export async function POST(request) {
+  try {
+    const authHeader = request.headers.get('authorization');
+    const body = await request.json();
+    
+    if (!authHeader) {
+      return NextResponse.json({ message: 'Unauthorized' }, { status: 401 });
+    }
+
+    const response = await fetch('https://web-production-dbd6b.up.railway.app/teknisi', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': authHeader
+      },
+      body: JSON.stringify(body)
+    });
+
+    if (!response.ok) {
+      return NextResponse.json(
+        { message: 'Failed to create data' }, 
+        { status: response.status }
+      );
+    }
+
+    const data = await response.json();
+    return NextResponse.json(data, { status: 201 });
+  } catch (error) {
+    return NextResponse.json(
+      { message: 'Internal Server Error' }, 
       { status: 500 }
     );
   }

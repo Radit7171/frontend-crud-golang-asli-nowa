@@ -18,6 +18,9 @@ export default function Home() {
   const [itemsPerPage, setItemsPerPage] = useState(5);
   const [totalPages, setTotalPages] = useState(0);
 
+  const [showModal, setShowModal] = useState(false);
+  const [selectedId, setSelectedId] = useState(null);
+
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) {
@@ -102,6 +105,46 @@ export default function Home() {
       elem.msRequestFullscreen();
     }
   }
+
+  const openModal = (id) => {
+    setSelectedId(id);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setSelectedId(null);
+    setShowModal(false);
+  };
+
+  const handleDelete = async () => {
+    if (!selectedId) return;
+
+    try {
+      const token = localStorage.getItem("token"); // ambil token login
+
+      const res = await fetch(`/api/hapus/${selectedId}`, {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`, // kirim token
+        },
+      });
+
+      if (res.ok) {
+        alert("Data berhasil dihapus!");
+        window.location.reload(); // atau update state tanpa reload
+      } else {
+        const error = await res.json();
+        alert("Gagal hapus: " + error.message);
+      }
+    } catch (err) {
+      console.error(err);
+      alert("Terjadi kesalahan.");
+    } finally {
+      closeModal();
+    }
+  };
+
   return (
     <>
       <div
@@ -1188,10 +1231,7 @@ export default function Home() {
             {/* Start::header-element */}
             <div className="header-element header-theme-mode">
               {/* Start::header-link|layout-setting */}
-              <a
-                href="#;"
-                className="header-link layout-setting"
-              >
+              <a href="#;" className="header-link layout-setting">
                 <span className="light-layout">
                   {/* Start::header-link-icon */}
                   <svg
@@ -2932,35 +2972,23 @@ export default function Home() {
                     </a>
                     <ul className="slide-menu child2">
                       <li className="slide">
-                        <a
-                          href="#;"
-                          className="side-menu__item"
-                        >
+                        <a href="#;" className="side-menu__item">
                           Level-2-1
                         </a>
                       </li>
                       <li className="slide has-sub">
-                        <a
-                          href="#;"
-                          className="side-menu__item"
-                        >
+                        <a href="#;" className="side-menu__item">
                           Level-2-2
                           <i className="fe fe-chevron-right side-menu__angle" />
                         </a>
                         <ul className="slide-menu child3">
                           <li className="slide">
-                            <a
-                              href="#;"
-                              className="side-menu__item"
-                            >
+                            <a href="#;" className="side-menu__item">
                               Level-2-2-1
                             </a>
                           </li>
                           <li className="slide">
-                            <a
-                              href="#;"
-                              className="side-menu__item"
-                            >
+                            <a href="#;" className="side-menu__item">
                               Level-2-2-2
                             </a>
                           </li>
@@ -4181,10 +4209,7 @@ export default function Home() {
                             23 Sep, 2021
                           </span>
                         </div>
-                        <a
-                          href="#;"
-                          className="fs-12 text-dark"
-                        >
+                        <a href="#;" className="fs-12 text-dark">
                           <p className="mb-1 fw-semibold text-dark fs-13">
                             Anita Letterback
                           </p>
@@ -4204,10 +4229,7 @@ export default function Home() {
                             16 Aug, 2021
                           </span>
                         </div>
-                        <a
-                          href="#;"
-                          className="fs-12 text-dark"
-                        >
+                        <a href="#;" className="fs-12 text-dark">
                           <p className="mb-1 fw-semibold text-dark fs-13">
                             Paddy O'Furniture
                           </p>
@@ -4227,10 +4249,7 @@ export default function Home() {
                             23 Feb, 2021
                           </span>
                         </div>
-                        <a
-                          href="#;"
-                          className="fs-12 text-dark"
-                        >
+                        <a href="#;" className="fs-12 text-dark">
                           <p className="mb-1 fw-semibold text-dark fs-13">
                             Olive Yew
                           </p>
@@ -4250,10 +4269,7 @@ export default function Home() {
                             21 june, 2021
                           </span>
                         </div>
-                        <a
-                          href="#;"
-                          className="fs-12 text-dark"
-                        >
+                        <a href="#;" className="fs-12 text-dark">
                           <p className="mb-1 fw-semibold text-dark fs-13">
                             Maureen Biologist
                           </p>
@@ -4273,10 +4289,7 @@ export default function Home() {
                             04 Aug, 2021
                           </span>
                         </div>
-                        <a
-                          href="#;"
-                          className="fs-12 text-dark"
-                        >
+                        <a href="#;" className="fs-12 text-dark">
                           <p className="mb-1 fw-semibold text-dark fs-13">
                             Peg Legge
                           </p>
@@ -4296,10 +4309,7 @@ export default function Home() {
                             04 Aug, 2021
                           </span>
                         </div>
-                        <a
-                          href="#;"
-                          className="fs-12 text-dark"
-                        >
+                        <a href="#;" className="fs-12 text-dark">
                           <p className="mb-1 fw-semibold text-dark fs-13">
                             Letterbac
                           </p>
@@ -4319,10 +4329,7 @@ export default function Home() {
                             23 Sep, 2021
                           </span>
                         </div>
-                        <a
-                          href="#;"
-                          className="fs-12 text-dark"
-                        >
+                        <a href="#;" className="fs-12 text-dark">
                           <p className="mb-1 fw-semibold text-dark fs-13">
                             Anita Letterback
                           </p>
@@ -4403,26 +4410,17 @@ export default function Home() {
                       </a>
                       <ul className="dropdown-menu" role="menu">
                         <li>
-                          <a
-                            className="dropdown-item"
-                            href="#;"
-                          >
+                          <a className="dropdown-item" href="#;">
                             New
                           </a>
                         </li>
                         <li>
-                          <a
-                            className="dropdown-item"
-                            href="#;"
-                          >
+                          <a className="dropdown-item" href="#;">
                             Popular
                           </a>
                         </li>
                         <li>
-                          <a
-                            className="dropdown-item"
-                            href="#;"
-                          >
+                          <a className="dropdown-item" href="#;">
                             Relevant
                           </a>
                         </li>
@@ -4666,6 +4664,7 @@ export default function Home() {
                                   <button
                                     className="btn btn-sm btn-outline-danger"
                                     title="Hapus"
+                                    onClick={() => openModal(tech.id)}
                                   >
                                     <i className="ri-delete-bin-line"></i>
                                   </button>
@@ -5406,6 +5405,31 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      {/* Modal Konfirmasi */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl shadow-lg p-6 w-96">
+            <h2 className="text-lg font-bold mb-4">Konfirmasi Hapus</h2>
+            <p>Apakah Anda yakin ingin menghapus data ini?</p>
+
+            <div className="flex justify-end gap-3 mt-6">
+              <button
+                onClick={closeModal}
+                className="px-4 py-2 rounded-lg border border-gray-300 hover:bg-gray-100"
+              >
+                Batal
+              </button>
+              <button
+                onClick={handleDelete}
+                className="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700"
+              >
+                Ya, Hapus
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       <div className="scrollToTop">
         <span className="arrow">
