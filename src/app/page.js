@@ -1,22 +1,107 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function Home() {
-  // Fungsi untuk masuk ke fullscreen
-function openFullscreen() {
-  const elem = document.documentElement; // seluruh halaman
+  const router = useRouter();
+  const [checked, setChecked] = useState(false);
+  const [teknisi, setTeknisi] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [searchTerm, setSearchTerm] = useState("");
 
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { // Firefox
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { // Chrome, Safari, Opera
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { // IE/Edge lama
-    elem.msRequestFullscreen();
+  // State untuk pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
+  const [totalPages, setTotalPages] = useState(0);
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!token) {
+      router.replace("/auth/login");
+      return;
+    }
+
+    fetchTeknisiData(token);
+  }, [router]);
+
+  const fetchTeknisiData = async (token) => {
+    try {
+      const response = await fetch("/api/tampil", {
+        method: "GET",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        setTeknisi(data);
+        setTotalPages(Math.ceil(data.length / itemsPerPage));
+      } else if (response.status === 401) {
+        localStorage.removeItem("token");
+        router.replace("/auth/login");
+      } else {
+        console.error("Gagal mengambil data teknisi");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  // Filter teknisi berdasarkan search term
+  const filteredTeknisi = teknisi.filter(
+    (tech) =>
+      tech.nama.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      tech.jurusan.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  // Hitung total pages setelah filtering
+  const filteredTotalPages = Math.ceil(filteredTeknisi.length / itemsPerPage);
+
+  // Dapatkan item untuk halaman saat ini
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = filteredTeknisi.slice(indexOfFirstItem, indexOfLastItem);
+
+  // Fungsi untuk ganti halaman
+  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
+  // Fungsi untuk ganti items per page
+  const handleItemsPerPageChange = (e) => {
+    const newItemsPerPage = parseInt(e.target.value);
+    setItemsPerPage(newItemsPerPage);
+    setCurrentPage(1); // Reset ke halaman pertama
+    setTotalPages(Math.ceil(filteredTeknisi.length / newItemsPerPage));
+  };
+
+  // Generate page numbers untuk pagination
+  const pageNumbers = [];
+  for (let i = 1; i <= filteredTotalPages; i++) {
+    pageNumbers.push(i);
   }
-}
+  // Fungsi untuk masuk ke fullscreen
+  function openFullscreen() {
+    const elem = document.documentElement; // seluruh halaman
+
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+      // Firefox
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+      // Chrome, Safari, Opera
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      // IE/Edge lama
+      elem.msRequestFullscreen();
+    }
+  }
   return (
     <>
       <div
@@ -858,7 +943,7 @@ function openFullscreen() {
             </div>
             <div className="d-grid canvas-footer">
               <a
-                href="javascript:void(0);"
+                href="#;"
                 id="reset-all"
                 className="btn btn-danger btn-block m-1"
               >
@@ -923,7 +1008,7 @@ function openFullscreen() {
                 aria-label="Hide Sidebar"
                 className="sidemenu-toggle header-link animated-arrow hor-toggle horizontal-navtoggle"
                 data-bs-toggle="sidebar"
-                href="javascript:void(0);"
+                href="#;"
               >
                 <span />
               </a>
@@ -950,7 +1035,7 @@ function openFullscreen() {
             <div className="header-element header-search d-block d-sm-none">
               {/* Start::header-link */}
               <a
-                href="javascript:void(0);"
+                href="#;"
                 className="header-link dropdown-toggle"
                 data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
@@ -1000,7 +1085,7 @@ function openFullscreen() {
             <div className="header-element country-selector">
               {/* Start::header-link|dropdown-toggle */}
               <a
-                href="javascript:void(0);"
+                href="#;"
                 className="header-link dropdown-toggle"
                 data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
@@ -1019,7 +1104,7 @@ function openFullscreen() {
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
-                    href="javascript:void(0);"
+                    href="#;"
                   >
                     <span className="avatar avatar-xs lh-1 me-2">
                       <img src="../assets/images/flags/us_flag.jpg" alt="img" />
@@ -1030,7 +1115,7 @@ function openFullscreen() {
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
-                    href="javascript:void(0);"
+                    href="#;"
                   >
                     <span className="avatar avatar-xs lh-1 me-2">
                       <img
@@ -1044,7 +1129,7 @@ function openFullscreen() {
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
-                    href="javascript:void(0);"
+                    href="#;"
                   >
                     <span className="avatar avatar-xs lh-1 me-2">
                       <img
@@ -1058,7 +1143,7 @@ function openFullscreen() {
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
-                    href="javascript:void(0);"
+                    href="#;"
                   >
                     <span className="avatar avatar-xs lh-1 me-2">
                       <img
@@ -1072,7 +1157,7 @@ function openFullscreen() {
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
-                    href="javascript:void(0);"
+                    href="#;"
                   >
                     <span className="avatar avatar-xs lh-1 me-2">
                       <img
@@ -1086,7 +1171,7 @@ function openFullscreen() {
                 <li>
                   <a
                     className="dropdown-item d-flex align-items-center"
-                    href="javascript:void(0);"
+                    href="#;"
                   >
                     <span className="avatar avatar-xs lh-1 me-2">
                       <img
@@ -1104,7 +1189,7 @@ function openFullscreen() {
             <div className="header-element header-theme-mode">
               {/* Start::header-link|layout-setting */}
               <a
-                href="javascript:void(0);"
+                href="#;"
                 className="header-link layout-setting"
               >
                 <span className="light-layout">
@@ -1141,7 +1226,7 @@ function openFullscreen() {
             <div className="header-element cart-dropdown">
               {/* Start::header-link|dropdown-toggle */}
               <a
-                href="javascript:void(0);"
+                href="#;"
                 className="header-link dropdown-toggle"
                 data-bs-auto-close="outside"
                 data-bs-toggle="dropdown"
@@ -1207,7 +1292,7 @@ function openFullscreen() {
                           </div>
                           <div>
                             <a
-                              href="javascript:void(0);"
+                              href="#;"
                               className="header-cart-remove float-end dropdown-item-close me-2"
                             >
                               <i className="fe fe-trash-2 text-danger" />
@@ -1239,7 +1324,7 @@ function openFullscreen() {
                           </div>
                           <div>
                             <a
-                              href="javascript:void(0);"
+                              href="#;"
                               className="header-cart-remove float-end dropdown-item-close me-2"
                             >
                               <i className="fe fe-trash-2 text-danger" />
@@ -1271,7 +1356,7 @@ function openFullscreen() {
                           </div>
                           <div>
                             <a
-                              href="javascript:void(0);"
+                              href="#;"
                               className="header-cart-remove float-end dropdown-item-close me-2"
                             >
                               <i className="fe fe-trash-2 text-danger" />
@@ -1303,7 +1388,7 @@ function openFullscreen() {
                           </div>
                           <div>
                             <a
-                              href="javascript:void(0);"
+                              href="#;"
                               className="header-cart-remove float-end dropdown-item-close me-2"
                             >
                               <i className="fe fe-trash-2 text-danger" />
@@ -1335,7 +1420,7 @@ function openFullscreen() {
                           </div>
                           <div>
                             <a
-                              href="javascript:void(0);"
+                              href="#;"
                               className="header-cart-remove float-end dropdown-item-close me-2"
                             >
                               <i className="fe fe-trash-2 text-danger" />
@@ -1387,7 +1472,7 @@ function openFullscreen() {
             <div className="header-element notifications-dropdown">
               {/* Start::header-link|dropdown-toggle */}
               <a
-                href="javascript:void(0);"
+                href="#;"
                 className="header-link dropdown-toggle"
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
@@ -1450,7 +1535,7 @@ function openFullscreen() {
                         </div>
                         <div>
                           <a
-                            href="javascript:void(0);"
+                            href="#;"
                             className="min-w-fit-content text-muted me-1 dropdown-item-close1"
                           >
                             <i className="ti ti-x fs-16" />
@@ -1477,7 +1562,7 @@ function openFullscreen() {
                         </div>
                         <div>
                           <a
-                            href="javascript:void(0);"
+                            href="#;"
                             className="min-w-fit-content text-muted me-1 dropdown-item-close1"
                           >
                             <i className="ti ti-x fs-16" />
@@ -1504,7 +1589,7 @@ function openFullscreen() {
                         </div>
                         <div>
                           <a
-                            href="javascript:void(0);"
+                            href="#;"
                             className="min-w-fit-content text-muted me-1 dropdown-item-close1"
                           >
                             <i className="ti ti-x fs-16" />
@@ -1531,7 +1616,7 @@ function openFullscreen() {
                         </div>
                         <div>
                           <a
-                            href="javascript:void(0);"
+                            href="#;"
                             className="min-w-fit-content text-muted me-1 dropdown-item-close1"
                           >
                             <i className="ti ti-x fs-16" />
@@ -1560,7 +1645,7 @@ function openFullscreen() {
                         </div>
                         <div>
                           <a
-                            href="javascript:void(0);"
+                            href="#;"
                             className="min-w-fit-content text-muted me-1 dropdown-item-close1"
                           >
                             <i className="ti ti-x fs-16" />
@@ -1587,7 +1672,7 @@ function openFullscreen() {
                         </div>
                         <div>
                           <a
-                            href="javascript:void(0);"
+                            href="#;"
                             className="min-w-fit-content text-muted me-1 dropdown-item-close1"
                           >
                             <i className="ti ti-x fs-16" />
@@ -1623,7 +1708,7 @@ function openFullscreen() {
             <div className="header-element header-shortcuts-dropdown d-md-block d-none">
               {/* Start::header-link|dropdown-toggle */}
               <a
-                href="javascript:void(0);"
+                href="#;"
                 className="header-link dropdown-toggle"
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
@@ -1660,7 +1745,7 @@ function openFullscreen() {
                 >
                   <div className="row g-2">
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img src="../assets/images/apps/figma.png" alt="" />
@@ -1670,7 +1755,7 @@ function openFullscreen() {
                       </a>
                     </div>
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img
@@ -1683,7 +1768,7 @@ function openFullscreen() {
                       </a>
                     </div>
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img
@@ -1696,7 +1781,7 @@ function openFullscreen() {
                       </a>
                     </div>
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img
@@ -1709,7 +1794,7 @@ function openFullscreen() {
                       </a>
                     </div>
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img
@@ -1722,7 +1807,7 @@ function openFullscreen() {
                       </a>
                     </div>
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img
@@ -1735,7 +1820,7 @@ function openFullscreen() {
                       </a>
                     </div>
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img
@@ -1748,7 +1833,7 @@ function openFullscreen() {
                       </a>
                     </div>
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img
@@ -1761,7 +1846,7 @@ function openFullscreen() {
                       </a>
                     </div>
                     <div className="col-4">
-                      <a href="javascript:void(0);">
+                      <a href="#;">
                         <div className="text-center p-3 related-app">
                           <span className="avatar avatar-sm avatar-rounded">
                             <img
@@ -1777,7 +1862,7 @@ function openFullscreen() {
                 </div>
                 <div className="p-3 border-top">
                   <div className="d-grid">
-                    <a href="javascript:void(0);" className="btn btn-primary">
+                    <a href="#;" className="btn btn-primary">
                       View All
                     </a>
                   </div>
@@ -1803,7 +1888,7 @@ function openFullscreen() {
                 href="#"
                 className="header-link"
                 data-bs-toggle="offcanvas"
-                data-bs-target="#sidebar-canvas"
+                data-bs-target="#switcher-canvas"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -2000,7 +2085,7 @@ function openFullscreen() {
               {/* End::slide__category */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2015,7 +2100,7 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Dashboards</a>
+                    <a href="#">Dashboards</a>
                   </li>
                   <li className="slide">
                     <a href="index.html" className="side-menu__item">
@@ -2042,7 +2127,7 @@ function openFullscreen() {
               {/* End::slide__category */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2057,7 +2142,7 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Apps</a>
+                    <a href="#">Apps</a>
                   </li>
                   <li className="slide">
                     <a href="full-calendar.html" className="side-menu__item">
@@ -2117,7 +2202,7 @@ function openFullscreen() {
               {/* End::slide */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2132,7 +2217,7 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Elements</a>
+                    <a href="#">Elements</a>
                   </li>
                   <li className="slide">
                     <a href="alerts.html" className="side-menu__item">
@@ -2234,7 +2319,7 @@ function openFullscreen() {
               {/* End::slide */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2250,7 +2335,7 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Advanced UI</a>
+                    <a href="#">Advanced UI</a>
                   </li>
                   <li className="slide">
                     <a
@@ -2345,7 +2430,7 @@ function openFullscreen() {
               {/* End::slide__category */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2362,18 +2447,18 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Pages</a>
+                    <a href="#">Pages</a>
                   </li>
                   <li className="slide has-sub">
-                    <a href="javascript:void(0);" className="side-menu__item">
+                    <a href="#;" className="side-menu__item">
                       Authentication
                       <i className="fe fe-chevron-right side-menu__angle" />
                     </a>
                     <ul className="slide-menu child2">
                       <li className="slide">
-                        <a href="signin.html" className="side-menu__item">
+                        <Link href="/auth/login" className="side-menu__item">
                           Sign In
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
                         <a href="signup.html" className="side-menu__item">
@@ -2421,7 +2506,7 @@ function openFullscreen() {
                     </ul>
                   </li>
                   <li className="slide has-sub">
-                    <a href="javascript:void(0);" className="side-menu__item">
+                    <a href="#;" className="side-menu__item">
                       Ecommerce
                       <i className="fe fe-chevron-right side-menu__angle" />
                     </a>
@@ -2480,7 +2565,7 @@ function openFullscreen() {
                     </a>
                   </li>
                   <li className="slide has-sub">
-                    <a href="javascript:void(0);" className="side-menu__item">
+                    <a href="#;" className="side-menu__item">
                       Mail
                       <i className="fe fe-chevron-right side-menu__angle" />
                     </a>
@@ -2545,7 +2630,7 @@ function openFullscreen() {
               {/* End::slide */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2561,7 +2646,7 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Utilities</a>
+                    <a href="#">Utilities</a>
                   </li>
                   <li className="slide">
                     <a href="avatars.html" className="side-menu__item">
@@ -2638,7 +2723,7 @@ function openFullscreen() {
               </li>
               {/* End::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2653,10 +2738,10 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Charts</a>
+                    <a href="#">Charts</a>
                   </li>{" "}
                   <li className="slide has-sub">
-                    <a href="javascript:void(0);" className="side-menu__item">
+                    <a href="#;" className="side-menu__item">
                       Apex Charts
                       <i className="fe fe-chevron-right side-menu__angle" />
                     </a>
@@ -2818,7 +2903,7 @@ function openFullscreen() {
               {/* End::slide__category */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2833,22 +2918,22 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Menu-levels</a>
+                    <a href="#">Menu-levels</a>
                   </li>
                   <li className="slide">
-                    <a href="javascript:void(0);" className="side-menu__item">
+                    <a href="#;" className="side-menu__item">
                       Level-1
                     </a>
                   </li>
                   <li className="slide has-sub">
-                    <a href="javascript:void(0);" className="side-menu__item">
+                    <a href="#;" className="side-menu__item">
                       Level-2
                       <i className="fe fe-chevron-right side-menu__angle" />
                     </a>
                     <ul className="slide-menu child2">
                       <li className="slide">
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="side-menu__item"
                         >
                           Level-2-1
@@ -2856,7 +2941,7 @@ function openFullscreen() {
                       </li>
                       <li className="slide has-sub">
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="side-menu__item"
                         >
                           Level-2-2
@@ -2865,7 +2950,7 @@ function openFullscreen() {
                         <ul className="slide-menu child3">
                           <li className="slide">
                             <a
-                              href="javascript:void(0);"
+                              href="#;"
                               className="side-menu__item"
                             >
                               Level-2-2-1
@@ -2873,7 +2958,7 @@ function openFullscreen() {
                           </li>
                           <li className="slide">
                             <a
-                              href="javascript:void(0);"
+                              href="#;"
                               className="side-menu__item"
                             >
                               Level-2-2-2
@@ -2893,7 +2978,7 @@ function openFullscreen() {
               {/* End::slide__category */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2908,10 +2993,10 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Forms</a>
+                    <a href="#">Forms</a>
                   </li>
                   <li className="slide has-sub">
-                    <a href="javascript:void(0);" className="side-menu__item">
+                    <a href="#;" className="side-menu__item">
                       Form Elements
                       <i className="fe fe-chevron-right side-menu__angle" />
                     </a>
@@ -2992,7 +3077,7 @@ function openFullscreen() {
                     </a>
                   </li>
                   <li className="slide has-sub">
-                    <a href="javascript:void(0);" className="side-menu__item">
+                    <a href="#;" className="side-menu__item">
                       Form Editors
                       <i className="fe fe-chevron-right side-menu__angle" />
                     </a>
@@ -3019,7 +3104,7 @@ function openFullscreen() {
               {/* End::slide */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -3034,7 +3119,7 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Tables</a>
+                    <a href="#">Tables</a>
                   </li>
                   <li className="slide">
                     <a href="tables.html" className="side-menu__item">
@@ -3072,7 +3157,7 @@ function openFullscreen() {
               {/* End::slide */}
               {/* Start::slide */}
               <li className="slide has-sub">
-                <a href="javascript:void(0);" className="side-menu__item">
+                <a href="#;" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -3087,7 +3172,7 @@ function openFullscreen() {
                 </a>
                 <ul className="slide-menu child1">
                   <li className="slide side-menu__label1">
-                    <a href="javascript:void(0)">Maps</a>
+                    <a href="#">Maps</a>
                   </li>
                   <li className="slide">
                     <a href="google-maps.html" className="side-menu__item">
@@ -3146,7 +3231,7 @@ function openFullscreen() {
             <div className="justify-content-center mt-2">
               <ol className="breadcrumb">
                 <li className="breadcrumb-item fs-15">
-                  <a href="javascript:void(0);">Dashboard</a>
+                  <a href="#;">Dashboard</a>
                 </li>
                 <li className="breadcrumb-item active" aria-current="page">
                   Sales
@@ -3486,7 +3571,7 @@ function openFullscreen() {
                     </div>
                     <div className="card-body p-0 customers mt-1">
                       <div className="list-group list-lg-group list-group-flush">
-                        <a href="javascript:void(0);" className="border-0">
+                        <a href="#;" className="border-0">
                           <div className="list-group-item list-group-item-action p-3 border-0">
                             <div className="media mt-0">
                               <img
@@ -3516,7 +3601,7 @@ function openFullscreen() {
                             </div>
                           </div>
                         </a>
-                        <a href="javascript:void(0);" className="border-0">
+                        <a href="#;" className="border-0">
                           <div className="list-group-item list-group-item-action p-3 border-0">
                             <div className="media mt-0">
                               <img
@@ -3546,7 +3631,7 @@ function openFullscreen() {
                             </div>
                           </div>
                         </a>
-                        <a href="javascript:void(0);" className="border-0">
+                        <a href="#;" className="border-0">
                           <div className="list-group-item list-group-item-action p-3 border-0">
                             <div className="media mt-0">
                               <img
@@ -3576,7 +3661,7 @@ function openFullscreen() {
                             </div>
                           </div>
                         </a>
-                        <a href="javascript:void(0);" className="border-0">
+                        <a href="#;" className="border-0">
                           <div className="list-group-item list-group-item-action p-3 border-0">
                             <div className="media mt-0">
                               <img
@@ -3606,7 +3691,7 @@ function openFullscreen() {
                             </div>
                           </div>
                         </a>
-                        <a href="javascript:void(0);" className="border-0">
+                        <a href="#;" className="border-0">
                           <div className="list-group-item list-group-item-action p-3 border-0">
                             <div className="media mt-0">
                               <img
@@ -3636,7 +3721,7 @@ function openFullscreen() {
                             </div>
                           </div>
                         </a>
-                        <a href="javascript:void(0);" className="border-0">
+                        <a href="#;" className="border-0">
                           <div className="list-group-item list-group-item-action p-3 border-0">
                             <div className="media mt-0">
                               <img
@@ -4097,7 +4182,7 @@ function openFullscreen() {
                           </span>
                         </div>
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="fs-12 text-dark"
                         >
                           <p className="mb-1 fw-semibold text-dark fs-13">
@@ -4120,7 +4205,7 @@ function openFullscreen() {
                           </span>
                         </div>
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="fs-12 text-dark"
                         >
                           <p className="mb-1 fw-semibold text-dark fs-13">
@@ -4143,7 +4228,7 @@ function openFullscreen() {
                           </span>
                         </div>
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="fs-12 text-dark"
                         >
                           <p className="mb-1 fw-semibold text-dark fs-13">
@@ -4166,7 +4251,7 @@ function openFullscreen() {
                           </span>
                         </div>
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="fs-12 text-dark"
                         >
                           <p className="mb-1 fw-semibold text-dark fs-13">
@@ -4189,7 +4274,7 @@ function openFullscreen() {
                           </span>
                         </div>
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="fs-12 text-dark"
                         >
                           <p className="mb-1 fw-semibold text-dark fs-13">
@@ -4212,7 +4297,7 @@ function openFullscreen() {
                           </span>
                         </div>
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="fs-12 text-dark"
                         >
                           <p className="mb-1 fw-semibold text-dark fs-13">
@@ -4235,7 +4320,7 @@ function openFullscreen() {
                           </span>
                         </div>
                         <a
-                          href="javascript:void(0);"
+                          href="#;"
                           className="fs-12 text-dark"
                         >
                           <p className="mb-1 fw-semibold text-dark fs-13">
@@ -4308,7 +4393,7 @@ function openFullscreen() {
                     </div>
                     <div className="dropdown">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-primary btn-sm btn-wave waves-effect waves-light"
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
@@ -4320,7 +4405,7 @@ function openFullscreen() {
                         <li>
                           <a
                             className="dropdown-item"
-                            href="javascript:void(0);"
+                            href="#;"
                           >
                             New
                           </a>
@@ -4328,7 +4413,7 @@ function openFullscreen() {
                         <li>
                           <a
                             className="dropdown-item"
-                            href="javascript:void(0);"
+                            href="#;"
                           >
                             Popular
                           </a>
@@ -4336,7 +4421,7 @@ function openFullscreen() {
                         <li>
                           <a
                             className="dropdown-item"
-                            href="javascript:void(0);"
+                            href="#;"
                           >
                             Relevant
                           </a>
@@ -4460,6 +4545,210 @@ function openFullscreen() {
               </div>
             </div>
           </div>
+          {/* row tabel  */}
+          <div className="row">
+            <div className="col-12 col-sm-12">
+              <div className="card">
+                <div className="card-header">
+                  <h4 className="card-title">Data Teknisi</h4>
+                </div>
+                <div className="card-body pt-0 example1-table">
+                  <div className="d-flex justify-content-between flex-wrap gap-2 mb-3">
+                    <div>
+                      <input
+                        className="form-control form-control-sm"
+                        type="text"
+                        placeholder="Cari teknisi..."
+                        value={searchTerm}
+                        onChange={(e) => {
+                          setSearchTerm(e.target.value);
+                          setCurrentPage(1); // Reset ke halaman pertama saat mencari
+                        }}
+                        aria-label="Cari teknisi"
+                      />
+                    </div>
+                    <div className="d-flex gap-2 align-items-center">
+                      <div className="d-flex align-items-center">
+                        <label htmlFor="itemsPerPage" className="me-2 mb-0">
+                          Tampilkan:
+                        </label>
+                        <select
+                          id="itemsPerPage"
+                          className="form-select form-select-sm"
+                          value={itemsPerPage}
+                          onChange={handleItemsPerPageChange}
+                          style={{ width: "80px" }}
+                        >
+                          <option value="5">5</option>
+                          <option value="10">10</option>
+                          <option value="20">20</option>
+                          <option value="50">50</option>
+                        </select>
+                      </div>
+                      <Link
+                        href="/teknisi/tambah"
+                        className="btn btn-primary btn-sm btn-wave waves-effect waves-light"
+                      >
+                        <i className="ri-add-line align-middle me-1"></i>
+                        Tambah Teknisi
+                      </Link>
+                      <div className="dropdown">
+                        <button
+                          className="btn btn-outline-secondary btn-sm btn-wave waves-effect waves-light"
+                          data-bs-toggle="dropdown"
+                          aria-expanded="false"
+                        >
+                          Urutkan
+                          <i className="ri-arrow-down-s-line align-middle ms-1" />
+                        </button>
+                        <ul className="dropdown-menu" role="menu">
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              onClick={() => {}}
+                            >
+                              Nama A-Z
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              onClick={() => {}}
+                            >
+                              Nama Z-A
+                            </button>
+                          </li>
+                          <li>
+                            <button
+                              className="dropdown-item"
+                              onClick={() => {}}
+                            >
+                              Jurusan
+                            </button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="table-responsive">
+                    <table
+                      className="table table-bordered text-nowrap mb-0"
+                      id="teknisi-table"
+                    >
+                      <thead>
+                        <tr>
+                          <th className="text-center">No</th>
+                          <th>Nama</th>
+                          <th>Jurusan</th>
+                          <th className="text-center">Aksi</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {currentItems.length > 0 ? (
+                          currentItems.map((tech, index) => (
+                            <tr key={index}>
+                              <td className="text-center">
+                                {(currentPage - 1) * itemsPerPage + index + 1}
+                              </td>
+                              <td>{tech.nama}</td>
+                              <td>{tech.jurusan}</td>
+                              <td className="text-center">
+                                <div className="btn-group">
+                                  <button
+                                    className="btn btn-sm btn-outline-primary"
+                                    title="Edit"
+                                    onClick={() =>
+                                      router.push(`/teknisi/edit/${tech.id}`)
+                                    }
+                                  >
+                                    <i className="ri-edit-line"></i>
+                                  </button>
+                                  <button
+                                    className="btn btn-sm btn-outline-danger"
+                                    title="Hapus"
+                                  >
+                                    <i className="ri-delete-bin-line"></i>
+                                  </button>
+                                </div>
+                              </td>
+                            </tr>
+                          ))
+                        ) : (
+                          <tr>
+                            <td colSpan="4" className="text-center py-4">
+                              {searchTerm
+                                ? "Tidak ada teknisi yang sesuai dengan pencarian"
+                                : "Tidak ada data teknisi"}
+                            </td>
+                          </tr>
+                        )}
+                      </tbody>
+                    </table>
+                  </div>
+
+                  {/* Pagination Controls */}
+                  {filteredTotalPages > 1 && (
+                    <div className="d-flex justify-content-between align-items-center mt-3">
+                      <div>
+                        <p className="mb-0">
+                          Menampilkan {indexOfFirstItem + 1} -{" "}
+                          {Math.min(indexOfLastItem, filteredTeknisi.length)}{" "}
+                          dari {filteredTeknisi.length} teknisi
+                        </p>
+                      </div>
+                      <nav aria-label="Page navigation">
+                        <ul className="pagination pagination-sm mb-0">
+                          <li
+                            className={`page-item ${
+                              currentPage === 1 ? "disabled" : ""
+                            }`}
+                          >
+                            <button
+                              className="page-link"
+                              onClick={() => paginate(currentPage - 1)}
+                              disabled={currentPage === 1}
+                            >
+                              Previous
+                            </button>
+                          </li>
+                          {pageNumbers.map((number) => (
+                            <li
+                              key={number}
+                              className={`page-item ${
+                                currentPage === number ? "active" : ""
+                              }`}
+                            >
+                              <button
+                                className="page-link"
+                                onClick={() => paginate(number)}
+                              >
+                                {number}
+                              </button>
+                            </li>
+                          ))}
+                          <li
+                            className={`page-item ${
+                              currentPage === filteredTotalPages
+                                ? "disabled"
+                                : ""
+                            }`}
+                          >
+                            <button
+                              className="page-link"
+                              onClick={() => paginate(currentPage + 1)}
+                              disabled={currentPage === filteredTotalPages}
+                            >
+                              Next
+                            </button>
+                          </li>
+                        </ul>
+                      </nav>
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
           {/* /row closed */}
         </div>
         {/* /Container */}
@@ -4471,11 +4760,11 @@ function openFullscreen() {
           <span>
             {" "}
             Copyright © <span id="year" />{" "}
-            <a href="javascript:void(0);" className="text-primary">
+            <a href="#;" className="text-primary">
               Nowa
             </a>
             . Designed with <span className="bi bi-heart-fill text-danger" /> by{" "}
-            <a href="javascript:void(0);">
+            <a href="#;">
               <span className="fw-semibold text-decoration-underline">
                 Spruko
               </span>
@@ -4571,7 +4860,7 @@ function openFullscreen() {
                       CH
                     </span>
                   </div>
-                  <a className="wrapper w-100 ms-3" href="javascript:void(0);">
+                  <a className="wrapper w-100 ms-3" href="#;">
                     <p className="mb-0 d-flex ">
                       <b>New Websites is Created</b>
                     </p>
@@ -4592,7 +4881,7 @@ function openFullscreen() {
                       N
                     </span>
                   </div>
-                  <a className="wrapper w-100 ms-3" href="javascript:void(0);">
+                  <a className="wrapper w-100 ms-3" href="#;">
                     <p className="mb-0 d-flex ">
                       <b>Prepare For the Next Project</b>
                     </p>
@@ -4613,7 +4902,7 @@ function openFullscreen() {
                       S
                     </span>
                   </div>
-                  <a className="wrapper w-100 ms-3" href="javascript:void(0);">
+                  <a className="wrapper w-100 ms-3" href="#;">
                     <p className="mb-0 d-flex ">
                       <b>Decide the live Discussion</b>
                     </p>
@@ -4634,7 +4923,7 @@ function openFullscreen() {
                       K
                     </span>
                   </div>
-                  <a className="wrapper w-100 ms-3" href="javascript:void(0);">
+                  <a className="wrapper w-100 ms-3" href="#;">
                     <p className="mb-0 d-flex ">
                       <b>Meeting at 3:00 pm</b>
                     </p>
@@ -4655,7 +4944,7 @@ function openFullscreen() {
                       R
                     </span>
                   </div>
-                  <a className="wrapper w-100 ms-3" href="javascript:void(0);">
+                  <a className="wrapper w-100 ms-3" href="#;">
                     <p className="mb-0 d-flex ">
                       <b>Prepare for Presentation</b>
                     </p>
@@ -4674,7 +4963,7 @@ function openFullscreen() {
                       MS
                     </span>
                   </div>
-                  <a className="wrapper w-100 ms-3" href="javascript:void(0);">
+                  <a className="wrapper w-100 ms-3" href="#;">
                     <p className="mb-0 d-flex ">
                       <b>Prepare for Presentation</b>
                     </p>
@@ -4693,7 +4982,7 @@ function openFullscreen() {
                       L
                     </span>
                   </div>
-                  <a className="wrapper w-100 ms-3" href="javascript:void(0);">
+                  <a className="wrapper w-100 ms-3" href="#;">
                     <p className="mb-0 d-flex ">
                       <b>Prepare for Presentation</b>
                     </p>
@@ -4714,7 +5003,7 @@ function openFullscreen() {
                       U
                     </span>
                   </div>
-                  <a className="wrapper w-100 ms-3" href="javascript:void(0);">
+                  <a className="wrapper w-100 ms-3" href="#;">
                     <p className="mb-0 d-flex ">
                       <b>Prepare for Presentation</b>
                     </p>
@@ -4838,7 +5127,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -4860,7 +5149,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -4880,7 +5169,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -4900,7 +5189,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -4920,7 +5209,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -4940,7 +5229,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -4962,7 +5251,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -4982,7 +5271,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -5002,7 +5291,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -5022,7 +5311,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -5044,7 +5333,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -5064,7 +5353,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -5084,7 +5373,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
@@ -5104,7 +5393,7 @@ function openFullscreen() {
                     </div>
                     <div className="ms-auto">
                       <a
-                        href="javascript:void(0);"
+                        href="#;"
                         className="btn btn-sm btn-outline-light btn-rounded"
                       >
                         <i className="fe fe-message-square fs-16" />
