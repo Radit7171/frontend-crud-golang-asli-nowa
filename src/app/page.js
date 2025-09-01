@@ -2208,42 +2208,42 @@ export default function Home() {
                     </Link>
                   </li>
                   <li className="slide">
-                    <a href="gallery.html" className="side-menu__item">
+                    <Link href="/gallery" className="side-menu__item">
                       Gallery
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="sweet_alerts.html" className="side-menu__item">
+                    <Link href="/sweet_alert" className="side-menu__item">
                       Sweet Alerts
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="notification.html" className="side-menu__item">
+                    <Link href="/notification" className="side-menu__item">
                       Notification
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a
-                      href="widget-notification.html"
+                    <Link
+                      href="/widget_notification.html"
                       className="side-menu__item"
                     >
                       Widget-notification
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="treeview.html" className="side-menu__item">
+                    <Link href="treeview" className="side-menu__item">
                       Treeview
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="file-manager.html" className="side-menu__item">
+                    <Link href="/file-manager" className="side-menu__item">
                       File-manager
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="file-manager1.html" className="side-menu__item">
+                    <Link href="file-manager1" className="side-menu__item">
                       File-manager1
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
                     <a href="file-details.html" className="side-menu__item">

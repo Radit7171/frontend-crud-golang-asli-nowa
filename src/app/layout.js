@@ -3,8 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 
-
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -79,9 +77,30 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="assets/libs/swiper/swiper-bundle.min.css"
         />
+        <link rel="stylesheet" href="/assets/libs/fullcalendar/main.min.css" />
+
+        {/* GLightbox CSS */}
         <link
           rel="stylesheet"
-          href="/assets/libs/fullcalendar/main.min.css"
+          href="/assets/libs/glightbox/css/glightbox.min.css"
+        />
+
+        {/* Sweetalerts CSS */}
+        <link
+          rel="stylesheet"
+          href="/assets/libs/sweetalert2/sweetalert2.min.css"
+        />
+
+        {/* Notifications Css */}
+        <link
+          rel="stylesheet"
+          href="/assets/libs/awesome-notifications/style.css"
+        />
+
+        {/* Treeview Css */}
+        <link
+          rel="stylesheet"
+          href="/assets/libs/js-treeview/treeview.min.css"
         />
       </head>
       <body
