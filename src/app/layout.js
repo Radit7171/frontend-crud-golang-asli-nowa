@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
         {/* Favicon */}
         <link
           rel="icon"
-          href="../assets/images/brand-logos/favicon.ico"
+          href="/assets/images/brand-logos/favicon.ico"
           type="image/x-icon"
         />
         {/* Bootstrap Css */}
@@ -55,9 +55,9 @@ export default function RootLayout({ children }) {
         {/* Style Css */}
         <link href="assets/css/styles.min.css" rel="stylesheet" />
         {/* Icons Css */}
-        <link href="../assets/css/icons.css" rel="stylesheet" />
+        <link href="/assets/css/icons.css" rel="stylesheet" />
         {/* Node Waves Css */}
-        <link href=".assets/libs/node-waves/waves.min.css" rel="stylesheet" />
+        <link href="assets/libs/node-waves/waves.min.css" rel="stylesheet" />
         {/* Simplebar Css */}
         <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet" />
         {/* Color Picker Css */}
@@ -79,6 +79,10 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="assets/libs/swiper/swiper-bundle.min.css"
         />
+        <link
+          rel="stylesheet"
+          href="/assets/libs/fullcalendar/main.min.css"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -87,47 +91,47 @@ export default function RootLayout({ children }) {
         <Script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></Script>
         <Script src="assets/js/main.js"></Script>
         {/* <!-- Popper JS --> */}
-        <Script src="../assets/libs/@popperjs/core/umd/popper.min.js"></Script>
+        <Script src="/assets/libs/@popperjs/core/umd/popper.min.js"></Script>
 
         {/* <!-- Bootstrap JS --> */}
-        <Script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></Script>
+        <Script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></Script>
 
         {/* <!-- Defaultmenu JS --> */}
-        <Script src="../assets/js/defaultmenu.min.js"></Script>
+        <Script src="/assets/js/defaultmenu.min.js"></Script>
 
         {/* <!-- Node Waves JS--> */}
-        <Script src="../assets/libs/node-waves/waves.min.js"></Script>
+        <Script src="/assets/libs/node-waves/waves.min.js"></Script>
 
         {/* <!-- Sticky JS --> */}
-        <Script src="../assets/js/sticky.js"></Script>
+        <Script src="/assets/js/sticky.js"></Script>
 
         {/* <!-- Simplebar JS --> */}
-        <Script src="../assets/libs/simplebar/simplebar.min.js"></Script>
-        <Script src="../assets/js/simplebar.js"></Script>
+        <Script src="/assets/libs/simplebar/simplebar.min.js"></Script>
+        <Script src="/assets/js/simplebar.js"></Script>
 
         {/* <!-- Color Picker JS --> */}
-        <Script src="../assets/libs/@simonwep/pickr/pickr.es5.min.js"></Script>
+        <Script src="/assets/libs/@simonwep/pickr/pickr.es5.min.js"></Script>
 
         {/* <!-- JSVector Maps JS --> */}
-        <Script src="../assets/libs/jsvectormap/js/jsvectormap.min.js"></Script>
+        <Script src="/assets/libs/jsvectormap/js/jsvectormap.min.js"></Script>
 
         {/* <!-- JSVector Maps MapsJS --> */}
-        <Script src="../assets/libs/jsvectormap/maps/world-merc.js"></Script>
+        <Script src="/assets/libs/jsvectormap/maps/world-merc.js"></Script>
 
         {/* <!-- Apex Charts JS --> */}
-        <Script src="../assets/libs/apexcharts/apexcharts.min.js"></Script>
+        <Script src="/assets/libs/apexcharts/apexcharts.min.js"></Script>
 
         {/* <!-- Chartjs Chart JS --> */}
-        <Script src="../assets/libs/chart.js/chart.min.js"></Script>
+        <Script src="/assets/libs/chart.js/chart.min.js"></Script>
 
         {/* <!-- Index Js --> */}
-        <Script src="../assets/js/index.js"></Script>
+        <Script src="/assets/js/index.js"></Script>
 
         {/* <!-- Custom-Switcher JS --> */}
-        <Script src="../assets/js/custom-switcher.min.js"></Script>
+        <Script src="/assets/js/custom-switcher.min.js"></Script>
 
         {/* <!-- Custom JS --> */}
-        <Script src="../assets/js/custom.js"></Script>
+        <Script src="/assets/js/custom.js"></Script>
       </body>
     </html>
   );

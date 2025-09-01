@@ -29,7 +29,15 @@ export default function Home() {
       return;
     }
 
-    fetchTeknisiData(token);
+    // ✅ cek dari URL, kalau belum ada query param → reload sekali
+    if (!window.location.search.includes("reloaded=true")) {
+      const newUrl = `${window.location.pathname}?reloaded=true`;
+      window.location.replace(newUrl); // reload total sekali
+      return;
+    }
+
+    // ✅ di sini baru jalankan data fetch atau router.refresh()
+    router.refresh();
   }, [router]);
 
   const fetchTeknisiData = async (token) => {
@@ -2144,19 +2152,20 @@ export default function Home() {
                     <a href="#">Dashboards</a>
                   </li>
                   <li className="slide">
-                    <a href="index.html" className="side-menu__item">
+                    <Link href="/" className="side-menu__item">
                       Dashboard-1
-                    </a>
+                    </Link>
                   </li>
+
                   <li className="slide">
-                    <a href="index1.html" className="side-menu__item">
+                    <Link href="/page_2" className="side-menu__item">
                       Dashboard-2
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="index2.html" className="side-menu__item">
+                    <Link href="page_3" className="side-menu__item">
                       Dashboard-3
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -2186,14 +2195,14 @@ export default function Home() {
                     <a href="#">Apps</a>
                   </li>
                   <li className="slide">
-                    <a href="full-calendar.html" className="side-menu__item">
+                    <Link href="/full-calendar" className="side-menu__item">
                       Full Calendar
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="contacts.html" className="side-menu__item">
+                    <Link href="/contacks" className="side-menu__item">
                       Contacts
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
                     <a href="gallery.html" className="side-menu__item">
