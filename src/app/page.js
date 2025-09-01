@@ -2278,94 +2278,94 @@ export default function Home() {
                     </Link>
                   </li>
                   <li className="slide">
-                    <a href="breadcrumb.html" className="side-menu__item">
+                    <Link href="/breadcrumb" className="side-menu__item">
                       Breadcrumbs
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="buttongroup.html" className="side-menu__item">
+                    <Link href="/buttongroup" className="side-menu__item">
                       Button Group
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="buttons.html" className="side-menu__item">
+                    <Link href="/buttons" className="side-menu__item">
                       Buttons
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="badge.html" className="side-menu__item">
+                    <Link href="/badge" className="side-menu__item">
                       Badge
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="cards.html" className="side-menu__item">
+                    <Link href="/cards" className="side-menu__item">
                       Cards
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="dropdowns.html" className="side-menu__item">
+                    <Link href="/dropdowns" className="side-menu__item">
                       Dropdowns
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="images_figures.html" className="side-menu__item">
+                    <Link href="/images_figures" className="side-menu__item">
                       Images &amp; Figures
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="listgroup.html" className="side-menu__item">
+                    <Link href="listgroup" className="side-menu__item">
                       List Group
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="navs_tabs.html" className="side-menu__item">
+                    <Link href="/navs_tabs" className="side-menu__item">
                       Navs &amp; Tabs
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="object-fit.html" className="side-menu__item">
+                    <Link href="/object-fit" className="side-menu__item">
                       Media Object
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="pagination.html" className="side-menu__item">
+                    <Link href="/pagination" className="side-menu__item">
                       Pagination
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="popovers.html" className="side-menu__item">
+                    <Link href="/popovers" className="side-menu__item">
                       Popovers
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="progress.html" className="side-menu__item">
+                    <Link href="/progress" className="side-menu__item">
                       Progress
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="spinners.html" className="side-menu__item">
+                    <Link href="/spinners" className="side-menu__item">
                       Spinners
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="tooltips.html" className="side-menu__item">
+                    <Link href="/tooltips" className="side-menu__item">
                       Tooltips
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="toasts.html" className="side-menu__item">
+                    <Link href="/toasts" className="side-menu__item">
                       Toasts
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="tags.html" className="side-menu__item">
+                    <Link href="/tags" className="side-menu__item">
                       Tags
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="typography.html" className="side-menu__item">
+                    <Link href="/typography" className="side-menu__item">
                       Typography
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -2391,12 +2391,12 @@ export default function Home() {
                     <a href="#">Advanced UI</a>
                   </li>
                   <li className="slide">
-                    <a
-                      href="accordions_collpase.html"
+                    <Link
+                      href="/accordions_collpase"
                       className="side-menu__item"
                     >
                       Accordion &amp; Collapse
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
                     <a href="carousel.html" className="side-menu__item">

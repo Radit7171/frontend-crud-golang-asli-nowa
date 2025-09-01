@@ -47,35 +47,35 @@ export default function RootLayout({ children }) {
         {/* Bootstrap Css */}
         <link
           id="style"
-          href="assets/libs/bootstrap/css/bootstrap.min.css"
+          href="/assets/libs/bootstrap/css/bootstrap.min.css"
           rel="stylesheet"
         />
         {/* Style Css */}
-        <link href="assets/css/styles.min.css" rel="stylesheet" />
+        <link href="/assets/css/styles.min.css" rel="stylesheet" />
         {/* Icons Css */}
         <link href="/assets/css/icons.css" rel="stylesheet" />
         {/* Node Waves Css */}
-        <link href="assets/libs/node-waves/waves.min.css" rel="stylesheet" />
+        <link href="/assets/libs/node-waves/waves.min.css" rel="stylesheet" />
         {/* Simplebar Css */}
-        <link href="assets/libs/simplebar/simplebar.min.css" rel="stylesheet" />
+        <link href="/assets/libs/simplebar/simplebar.min.css" rel="stylesheet" />
         {/* Color Picker Css */}
-        <link rel="stylesheet" href="assets/libs/flatpickr/flatpickr.min.css" />
+        <link rel="/stylesheet" href="assets/libs/flatpickr/flatpickr.min.css" />
         <link
           rel="stylesheet"
-          href="assets/libs/@simonwep/pickr/themes/nano.min.css"
+          href="/assets/libs/@simonwep/pickr/themes/nano.min.css"
         />
         {/* Choices Css */}
         <link
           rel="stylesheet"
-          href="assets/libs/choices.js/public/assets/styles/choices.min.css"
+          href="/assets/libs/choices.js/public/assets/styles/choices.min.css"
         />
         <link
           rel="stylesheet"
-          href="assets/libs/jsvectormap/css/jsvectormap.min.css"
+          href="/assets/libs/jsvectormap/css/jsvectormap.min.css"
         />
         <link
           rel="stylesheet"
-          href="assets/libs/swiper/swiper-bundle.min.css"
+          href="/assets/libs/swiper/swiper-bundle.min.css"
         />
         <link rel="stylesheet" href="/assets/libs/fullcalendar/main.min.css" />
 
@@ -113,8 +113,8 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <Script src="assets/libs/choices.js/public/assets/scripts/choices.min.js"></Script>
-        <Script src="assets/js/main.js"></Script>
+        <Script src="/assets/libs/choices.js/public/assets/scripts/choices.min.js"></Script>
+        <Script src="/assets/js/main.js"></Script>
         {/* <!-- Popper JS --> */}
         <Script src="/assets/libs/@popperjs/core/umd/popper.min.js"></Script>
 
