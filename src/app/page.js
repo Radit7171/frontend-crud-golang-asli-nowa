@@ -23,22 +23,25 @@ export default function Home() {
   const [selectedId, setSelectedId] = useState(null);
 
   useEffect(() => {
-    const token = localStorage.getItem("token");
-    if (!token) {
-      router.replace("/auth/login");
-      return;
-    }
+  const token = localStorage.getItem("token");
+  if (!token) {
+    router.replace("/auth/login");
+    return;
+  }
 
-    // ✅ cek dari URL, kalau belum ada query param → reload sekali
-    if (!window.location.search.includes("reloaded=true")) {
-      const newUrl = `${window.location.pathname}?reloaded=true`;
-      window.location.replace(newUrl); // reload total sekali
-      return;
-    }
+  // reload sekali
+  if (!window.location.search.includes("reloaded=true")) {
+    const newUrl = `${window.location.pathname}?reloaded=true`;
+    window.location.replace(newUrl); 
+    return;
+  }
 
-    // ✅ di sini baru jalankan data fetch atau router.refresh()
-    router.refresh();
-  }, [router]);
+  // ✅ setelah reload → fetch data teknisi
+  fetchTeknisiData(token);
+
+  // kalau masih perlu refresh Next.js data
+  router.refresh();
+}, [router]);
 
   const fetchTeknisiData = async (token) => {
     try {
