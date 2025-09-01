@@ -2246,9 +2246,9 @@ export default function Home() {
                     </Link>
                   </li>
                   <li className="slide">
-                    <a href="file-details.html" className="side-menu__item">
+                    <Link href="/file-details" className="side-menu__item">
                       File-details
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -2273,9 +2273,9 @@ export default function Home() {
                     <a href="#">Elements</a>
                   </li>
                   <li className="slide">
-                    <a href="alerts.html" className="side-menu__item">
+                    <Link href="/alerts" className="side-menu__item">
                       Alerts
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
                     <a href="breadcrumb.html" className="side-menu__item">

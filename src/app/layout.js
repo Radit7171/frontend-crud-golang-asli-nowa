@@ -102,6 +102,12 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="/assets/libs/js-treeview/treeview.min.css"
         />
+
+        {/* Prism CSS */}
+        <link
+          rel="stylesheet"
+          href="/assets/libs/prismjs/themes/prism-coy.min.css"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
