@@ -2399,79 +2399,79 @@ export default function Home() {
                     </Link>
                   </li>
                   <li className="slide">
-                    <a href="carousel.html" className="side-menu__item">
+                    <Link href="/carousel" className="side-menu__item">
                       Carousel
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="draggable-cards.html" className="side-menu__item">
+                    <Link href="/draggable-cards" className="side-menu__item">
                       Draggablecards
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="modals_closes.html" className="side-menu__item">
+                    <Link href="/modals_closes" className="side-menu__item">
                       Modals &amp; Closes
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="navbar.html" className="side-menu__item">
+                    <Link href="/navbar" className="side-menu__item">
                       Navbar
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="offcanvas.html" className="side-menu__item">
+                    <Link href="/offcanvas" className="side-menu__item">
                       Offcanvas
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="placeholders.html" className="side-menu__item">
+                    <Link href="/placeholders" className="side-menu__item">
                       Placeholders
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="ratings.html" className="side-menu__item">
+                    <Link href="/ratings" className="side-menu__item">
                       Ratings
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="scrollspy.html" className="side-menu__item">
+                    <Link href="/scrollspy" className="side-menu__item">
                       Scrollspy
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="swiperjs.html" className="side-menu__item">
+                    <Link href="/swiperjs" className="side-menu__item">
                       Swiper Js
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="timeline.html" className="side-menu__item">
+                    <Link href="/timeline" className="side-menu__item">
                       Timeline
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="search.html" className="side-menu__item">
+                    <Link href="search" className="side-menu__item">
                       Search
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="userlist.html" className="side-menu__item">
+                    <Link href="/userlist" className="side-menu__item">
                       Userlist
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="blog.html" className="side-menu__item">
+                    <Link href="/blog" className="side-menu__item">
                       Blog
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="blog-details.html" className="side-menu__item">
+                    <Link href="/blog-details" className="side-menu__item">
                       Blog-details
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="edit-post.html" className="side-menu__item">
+                    <Link href="/edit-post" className="side-menu__item">
                       Edit-post
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -2509,52 +2509,52 @@ export default function Home() {
                     </a>
                     <ul className="slide-menu child2">
                       <li className="slide">
-                        <Link href="/auth/login" className="side-menu__item">
+                        <Link href="/Authentication/signin" className="side-menu__item">
                           Sign In
                         </Link>
                       </li>
                       <li className="slide">
-                        <a href="signup.html" className="side-menu__item">
+                        <Link href="/Authentication/signup" className="side-menu__item">
                           Sign Up
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="forgot.html" className="side-menu__item">
+                        <Link href="/Authentication/forgot" className="side-menu__item">
                           Forgot password
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="reset.html" className="side-menu__item">
+                        <Link href="/Authentication/reset" className="side-menu__item">
                           Reset password
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="lockscreen.html" className="side-menu__item">
+                        <Link href="/Authentication/lockscreen" className="side-menu__item">
                           Lockscreen
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="underconstruction.html"
+                        <Link
+                          href="/Authentication/underconstruction"
                           className="side-menu__item"
                         >
                           Underconstruction
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="404.html" className="side-menu__item">
+                        <Link href="/Authentication/404" className="side-menu__item">
                           404 Error
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="500.html" className="side-menu__item">
+                        <Link href="/Authentication/500" className="side-menu__item">
                           500 Error
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="501.html" className="side-menu__item">
+                        <Link href="/Authentication/501" className="side-menu__item">
                           501 Error
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
@@ -2565,52 +2565,52 @@ export default function Home() {
                     </a>
                     <ul className="slide-menu child2">
                       <li className="slide">
-                        <a href="shop.html" className="side-menu__item">
+                        <Link href="/Ecommerce/shop" className="side-menu__item">
                           Shop
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="product-details.html"
+                        <Link
+                          href="/Ecommerce/product-details"
                           className="side-menu__item"
                         >
                           Product details
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="product-cart.html" className="side-menu__item">
+                        <Link href="/Ecommerce/product-cart" className="side-menu__item">
                           Cart
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="check-out.html" className="side-menu__item">
+                        <Link href="/Ecommerce/check-out" className="side-menu__item">
                           Check-out
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="wish-list.html" className="side-menu__item">
+                        <Link href="/Ecommerce/wish-list" className="side-menu__item">
                           Wishlist
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li className="slide">
-                    <a href="profile.html" className="side-menu__item">
+                    <Link href="/profile" className="side-menu__item">
                       Profile
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a
-                      href="profile-notifications.html"
+                    <Link
+                      href="/profile-notification"
                       className="side-menu__item"
                     >
                       Notification-list
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="aboutus.html" className="side-menu__item">
+                    <Link href="/aboutus" className="side-menu__item">
                       About us
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
                     <a href="settings.html" className="side-menu__item">

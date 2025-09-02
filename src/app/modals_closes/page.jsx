@@ -9,7 +9,7 @@ import { useState } from "react";
 import Script from "next/script";
 import Head from "next/head";
 
-export default function Accordions_collpase() {
+export default function Modals_closes() {
   const router = useRouter();
   const [checked, setChecked] = useState(false);
   const [teknisi, setTeknisi] = useState([]);
@@ -158,37 +158,6 @@ export default function Accordions_collpase() {
 
   return (
     <>
-      {/* <!-- Popper JS --> */}
-      <Script src="/assets/libs/@popperjs/core/umd/popper.min.js"></Script>
-
-      {/* <!-- Bootstrap JS --> */}
-      <Script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></Script>
-
-      {/* <!-- Defaultmenu JS --> */}
-      <Script src="/assets/js/defaultmenu.min.js"></Script>
-
-      {/* <!-- Node Waves JS--> */}
-      <Script src="/assets/libs/node-waves/waves.min.js"></Script>
-
-      {/* <!-- Sticky JS --> */}
-      <Script src="/assets/js/sticky.js"></Script>
-
-      {/* <!-- Simplebar JS --> */}
-      <Script src="/assets/libs/simplebar/simplebar.min.js"></Script>
-      <Script src="/assets/js/simplebar.js"></Script>
-
-      {/* <!-- Color Picker JS --> */}
-      <Script src="/assets/libs/@simonwep/pickr/pickr.es5.min.js"></Script>
-
-      {/* <!-- Custom-Switcher JS --> */}
-      <Script src="/assets/js/custom-switcher.min.js"></Script>
-
-      {/* <!-- Prism JS --> */}
-      <Script src="/assets/libs/prismjs/prism.js"></Script>
-      <Script src="/assets/js/prism-custom.js"></Script>
-
-      {/* <!-- Custom JS --> */}
-      <Script src="/assets/js/custom.js"></Script>
       {/* Start Switcher */}
       <div
         className="offcanvas offcanvas-end"
@@ -264,7 +233,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="theme-style"
                         id="switcher-light-theme"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -302,7 +271,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="direction"
                         id="switcher-ltr"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -340,7 +309,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="navigation-style"
                         id="switcher-vertical"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -449,7 +418,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="sidemenu-layout-styles"
                         id="switcher-default-menu"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -551,7 +520,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="page-styles"
                         id="switcher-regular"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -605,7 +574,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="layout-width"
                         id="switcher-full-width"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -643,7 +612,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="menu-positions"
                         id="switcher-menu-fixed"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -681,7 +650,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="header-positions"
                         id="switcher-header-fixed"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -735,7 +704,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="page-loader"
                         id="switcher-loader-disable"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                   </div>
@@ -762,7 +731,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="menu-colors"
                         id="switcher-menu-light"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                     <div className="form-check switch-select me-3">
@@ -827,7 +796,7 @@ export default function Accordions_collpase() {
                         type="radio"
                         name="header-colors"
                         id="switcher-header-light"
-                        defaultChecked={true}
+                        defaultChecked=""
                       />
                     </div>
                     <div className="form-check switch-select me-3">
@@ -3334,7 +3303,9 @@ export default function Accordions_collpase() {
           <div className="container-fluid">
             {/* Page Header */}
             <div className="d-md-flex d-block align-items-center justify-content-between my-4 page-header-breadcrumb">
-              <h1 className="page-title fw-semibold fs-18 mb-0">ACCORDIONS</h1>
+              <h1 className="page-title fw-semibold fs-18 mb-0">
+                MODAL &amp; CLOSES
+              </h1>
               <div className="ms-md-1 ms-0">
                 <nav>
                   <ol className="breadcrumb mb-0">
@@ -3342,7 +3313,7 @@ export default function Accordions_collpase() {
                       <a href="#">Advanced Ui</a>
                     </li>
                     <li className="breadcrumb-item active" aria-current="page">
-                      ACCORDIONS
+                      MODAL &amp; CLOSES
                     </li>
                   </ol>
                 </nav>
@@ -3351,10 +3322,10 @@ export default function Accordions_collpase() {
             {/* Page Header Close */}
             {/* Start:: row-1 */}
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-4">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">Basic Accordion</div>
+                    <div className="card-title">Basic Modal</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -3363,109 +3334,46 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
-                    <div className="accordion" id="accordionExample">
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingOne">
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="true"
-                            aria-controls="collapseOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingOne"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                    >
+                      Launch demo modal
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="exampleModal"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6 className="modal-title" id="exampleModalLabel1">
+                              Modal title
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingTwo">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingTwo"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the second item's accordion body.
-                            </strong>{" "}
-                            It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingThree">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingThree"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the third item's accordion body.
-                            </strong>{" "}
-                            It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
+                          <div className="modal-body">...</div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Save changes
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -3475,134 +3383,35 @@ export default function Accordions_collpase() {
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion" id="accordionExample"&gt;
-                        {"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}data-bs-target="#collapseOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}aria-controls="collapseOne"&gt;
-                        {"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}aria-labelledby="headingOne"
-                        data-bs-parent="#accordionExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use{"\n"}
-                        {"                "}to{"\n"}
-                        {"                "}style each element. These classes
-                        control the overall appearance, as{"\n"}
-                        {"                "}well as{"\n"}
-                        {"                "}the{"\n"}
-                        {"                "}showing and hiding via CSS
-                        transitions. You can modify any of this with{"\n"}
-                        {"                "}custom{"\n"}
-                        {"                "}CSS or overriding our default
-                        variables. It's also worth noting that{"\n"}
-                        {"                "}just{"\n"}
-                        {"                "}about{"\n"}
-                        {"                "}any HTML can go within the
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        {"\n"}
-                        {"                "}transition{"\n"}
-                        {"                "}does limit overflow.{"\n"}
+                        &lt;button type="button" class="btn btn-primary"
+                        data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#exampleModal"&gt;{"\n"}
+                        {"    "}Launch demo modal{"\n"}&lt;/button&gt;{"\n"}
+                        &lt;div class="modal fade" id="exampleModal"
+                        tabindex="-1"{"\n"}
+                        {"    "}aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6 class="modal-title"
+                        id="exampleModalLabel1"&gt;Modal title&lt;/h6&gt;{"\n"}
+                        {"                "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                    "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapseTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingTwo"
-                        data-bs-parent="#accordionExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the second
-                        item's accordion body.&lt;/strong&gt; It is hidden{"\n"}
-                        {"                "}by{"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use{"\n"}
-                        {"                "}to{"\n"}
-                        {"                "}style each element. These classes
-                        control the overall appearance, as{"\n"}
-                        {"                "}well as{"\n"}
-                        {"                "}the{"\n"}
-                        {"                "}showing and hiding via CSS
-                        transitions. You can modify any of this with{"\n"}
-                        {"                "}custom{"\n"}
-                        {"                "}CSS or overriding our default
-                        variables. It's also worth noting that{"\n"}
-                        {"                "}just{"\n"}
-                        {"                "}about{"\n"}
-                        {"                "}any HTML can go within the
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        {"\n"}
-                        {"                "}transition{"\n"}
-                        {"                "}does limit overflow.{"\n"}
+                        {"            "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                "}...{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapseThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingThree"
-                        data-bs-parent="#accordionExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the third
-                        item's accordion body.&lt;/strong&gt; It is hidden{"\n"}
-                        {"                "}by{"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use{"\n"}
-                        {"                "}to{"\n"}
-                        {"                "}style each element. These classes
-                        control the overall appearance, as{"\n"}
-                        {"                "}well as{"\n"}
-                        {"                "}the{"\n"}
-                        {"                "}showing and hiding via CSS
-                        transitions. You can modify any of this with{"\n"}
-                        {"                "}custom{"\n"}
-                        {"                "}CSS or overriding our default
-                        variables. It's also worth noting that{"\n"}
-                        {"                "}just{"\n"}
-                        {"                "}about{"\n"}
-                        {"                "}any HTML can go within the
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        {"\n"}
-                        {"                "}transition{"\n"}
-                        {"                "}does limit overflow.{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                    "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-primary"&gt;Save{"\n"}
+                        {"                    "}changes&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
                         {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
@@ -3612,19 +3421,10 @@ export default function Accordions_collpase() {
                   </div>
                 </div>
               </div>
-              <div className="col-xl-6">
+              <div className="col-xl-4">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">
-                      Always Open Accordion
-                      <p className="text-muted subtitle fs-12 fw-normal">
-                        Omit the <code>data-bs-parent</code>
-                        attribute on each
-                        <code>.accordion-collapse</code>
-                        to make accordion items stay open when another item is
-                        opened.
-                      </p>
-                    </div>
+                    <div className="card-title">Static backdrop</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -3633,117 +3433,56 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
-                    <div
-                      className="accordion"
-                      id="accordionPanelsStayOpenExample"
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#staticBackdrop"
                     >
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="panelsStayOpen-headingOne"
-                        >
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseOne"
-                            aria-expanded="true"
-                            aria-controls="panelsStayOpen-collapseOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="panelsStayOpen-collapseOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="panelsStayOpen-headingOne"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. It's also worth noting that just
-                            about any HTML can go within the{" "}
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                      Launch static backdrop modal
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="staticBackdrop"
+                      data-bs-backdrop="static"
+                      data-bs-keyboard="false"
+                      tabIndex={-1}
+                      aria-labelledby="staticBackdropLabel"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="staticBackdropLabel"
+                            >
+                              Modal title
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="panelsStayOpen-headingTwo"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="panelsStayOpen-collapseTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="panelsStayOpen-headingTwo"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the second item's accordion body.
-                            </strong>{" "}
-                            It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
+                          <div className="modal-body">
+                            <p>
+                              I will not close if you click outside me. Don't
+                              even try to press escape key.
+                            </p>
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="panelsStayOpen-headingThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#panelsStayOpen-collapseThree"
-                            aria-expanded="false"
-                            aria-controls="panelsStayOpen-collapseThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="panelsStayOpen-collapseThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="panelsStayOpen-headingThree"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the third item's accordion body.
-                            </strong>{" "}
-                            It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Understood
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -3753,126 +3492,286 @@ export default function Accordions_collpase() {
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion"
-                        id="accordionPanelsStayOpenExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="panelsStayOpen-headingOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}
-                        data-bs-target="#panelsStayOpen-collapseOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}
-                        aria-controls="panelsStayOpen-collapseOne"&gt;{"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="panelsStayOpen-collapseOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}
-                        aria-labelledby="panelsStayOpen-headingOne"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use{"\n"}
-                        {"                "}to style each element. These classes
-                        control the overall appearance, as{"\n"}
-                        {"                "}well{"\n"}
-                        {"                "}as the showing and hiding via CSS
-                        transitions. It's also worth{"\n"}
-                        {"                "}noting{"\n"}
-                        {"                "}that just about any HTML can go
-                        within the &lt;code&gt;.accordion-body&lt;/code&gt;,
-                        {"\n"}
-                        {"                "}though the transition does limit
-                        overflow.{"\n"}
+                        &lt;button type="button" class="btn btn-primary"
+                        data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#staticBackdrop"&gt;{"\n"}
+                        {"    "}Launch static backdrop modal{"\n"}
+                        &lt;/button&gt;
+                        {"\n"}&lt;div class="modal fade" id="staticBackdrop"
+                        data-bs-backdrop="static"{"\n"}
+                        {"    "}data-bs-keyboard="false" tabindex="-1"
+                        aria-labelledby="staticBackdropLabel"{"\n"}
+                        {"    "}aria-hidden="true"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6 class="modal-title"
+                        id="staticBackdropLabel"&gt;Modal title{"\n"}
+                        {"                "}&lt;/h6&gt;{"\n"}
+                        {"                "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                    "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="panelsStayOpen-headingTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="panelsStayOpen-collapseTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="panelsStayOpen-headingTwo"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the second
-                        item's accordion body.&lt;/strong&gt; It is hidden{"\n"}
-                        {"                "}by{"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use{"\n"}
-                        {"                "}to style each element. These classes
-                        control the overall appearance, as{"\n"}
-                        {"                "}well{"\n"}
-                        {"                "}as the showing and hiding via CSS
-                        transitions. You can modify any of{"\n"}
-                        {"                "}this{"\n"}
-                        {"                "}with custom CSS or overriding our
-                        default variables. It's also worth{"\n"}
-                        {"                "}noting{"\n"}
-                        {"                "}that just about any HTML can go
-                        within the &lt;code&gt;.accordion-body&lt;/code&gt;,
-                        {"\n"}
-                        {"                "}though the transition does limit
-                        overflow.{"\n"}
+                        {"            "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                "}&lt;p&gt;I will not close if you
+                        click outside me. Don't even try to{"\n"}
+                        {"                    "}press{"\n"}
+                        {"                    "}escape key.&lt;/p&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="panelsStayOpen-headingThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="panelsStayOpen-collapseThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="panelsStayOpen-headingThree"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the third
-                        item's accordion body.&lt;/strong&gt; It is hidden{"\n"}
-                        {"                "}by{"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use{"\n"}
-                        {"                "}to style each element. These classes
-                        control the overall appearance, as{"\n"}
-                        {"                "}well{"\n"}
-                        {"                "}as the showing and hiding via CSS
-                        transitions. You can modify any of{"\n"}
-                        {"                "}this{"\n"}
-                        {"                "}with custom CSS or overriding our
-                        default variables. It's also worth{"\n"}
-                        {"                "}noting{"\n"}
-                        {"                "}that just about any HTML can go
-                        within the &lt;code&gt;.accordion-body&lt;/code&gt;,
-                        {"\n"}
-                        {"                "}though the transition does limit
-                        overflow.{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                    "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-primary"&gt;Understood&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
                         {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                      </code>
+                    </pre>
+                    {/* Prism Code */}
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4">
+                <div className="card custom-card">
+                  <div className="card-header justify-content-between">
+                    <div className="card-title">Scrolling long content</div>
+                    <div className="prism-toggle">
+                      <button className="btn btn-sm btn-primary-light">
+                        Show Code
+                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="card-body">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModalScrollable"
+                    >
+                      Scrolling long content
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="exampleModalScrollable"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalScrollable"
+                      data-bs-keyboard="false"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog modal-dialog-scrollable">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="staticBackdropLabel1"
+                            >
+                              Modal title
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">
+                            <p>
+                              Lorem ipsum dolor sit, amet consectetur
+                              adipisicing elit. Libero ipsum quasi, error
+                              quibusdam debitis maiores hic eum? Vitae nisi ipsa
+                              maiores fugiat deleniti quis reiciendis veritatis.
+                            </p>
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Ea voluptatibus, ipsam quo est
+                              rerum modi quos expedita facere, ex tempore fuga
+                              similique ipsa blanditiis et accusamus temporibus
+                              commodi voluptas! Nobis veniam illo architecto
+                              expedita quam ratione quaerat omnis. In,
+                              recusandae eos! Pariatur, deleniti quis ad nemo
+                              ipsam officia temporibus, doloribus fuga
+                              asperiores ratione distinctio velit alias hic modi
+                              praesentium aperiam officiis eaque, accusamus aut.
+                              Accusantium assumenda, commodi nulla provident
+                              asperiores fugit inventore iste amet aut placeat
+                              consequatur reprehenderit. Ratione tenetur
+                              eligendi, quis aperiam dolores magni iusto
+                              distinctio voluptatibus minus a unde at!
+                              Consequatur voluptatum in eaque obcaecati, impedit
+                              accusantium ea soluta, excepturi, quasi quia
+                              commodi blanditiis? Qui blanditiis iusto corrupti
+                              necessitatibus dolorem fugiat consequuntur quod
+                              quo veniam? Labore dignissimos reiciendis
+                              accusamus recusandae est consequuntur iure.
+                            </p>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Save Changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-footer d-none border-top-0">
+                    {/* Prism Code */}
+                    <pre className="language-html">
+                      <code className="language-html">
+                        &lt;button type="button" class="btn btn-primary"
+                        data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#exampleModalScrollable"&gt;
+                        {"\n"}
+                        {"    "}Scrolling long content{"\n"}
+                        {"    "}&lt;/button&gt;{"\n"}
+                        {"    "}&lt;div class="modal fade"
+                        id="exampleModalScrollable" tabindex="-1"{"\n"}
+                        {"        "}aria-labelledby="exampleModalScrollable"
+                        data-bs-keyboard="false"{"\n"}
+                        {"        "}aria-hidden="true"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-dialog
+                        modal-dialog-scrollable"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"                "}&lt;div class="modal-header"&gt;
+                        {"\n"}
+                        {"                    "}&lt;h6 class="modal-title"
+                        id="staticBackdropLabel1"&gt;Modal title{"\n"}
+                        {"                    "}&lt;/h6&gt;{"\n"}
+                        {"                    "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                        "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
+                        {"                "}&lt;/div&gt;{"\n"}
+                        {"                "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                    "}&lt;p&gt;Lorem ipsum dolor sit,
+                        amet consectetur adipisicing elit.{"\n"}
+                        {"                        "}Libero{"\n"}
+                        {"                        "}ipsum quasi, error quibusdam
+                        debitis maiores hic eum? Vitae{"\n"}
+                        {"                        "}nisi{"\n"}
+                        {"                        "}ipsa maiores fugiat deleniti
+                        quis reiciendis veritatis.&lt;/p&gt;{"\n"}
+                        {"                    "}&lt;p&gt;Lorem ipsum dolor sit
+                        amet consectetur, adipisicing elit. Ea{"\n"}
+                        {"                        "}voluptatibus, ipsam quo est
+                        rerum modi quos expedita facere,{"\n"}
+                        {"                        "}ex{"\n"}
+                        {"                        "}tempore fuga similique ipsa
+                        blanditiis et accusamus{"\n"}
+                        {"                        "}temporibus{"\n"}
+                        {"                        "}commodi voluptas! Nobis
+                        veniam illo architecto expedita quam{"\n"}
+                        {"                        "}ratione quaerat omnis. In,
+                        recusandae eos! Pariatur,{"\n"}
+                        {"                        "}deleniti{"\n"}
+                        {"                        "}quis ad nemo ipsam officia
+                        temporibus, doloribus fuga{"\n"}
+                        {"                        "}asperiores{"\n"}
+                        {"                        "}ratione distinctio velit
+                        alias hic modi praesentium aperiam{"\n"}
+                        {"                        "}officiis eaque, accusamus
+                        aut. Accusantium assumenda,{"\n"}
+                        {"                        "}commodi{"\n"}
+                        {"                        "}nulla provident asperiores
+                        fugit inventore iste amet aut{"\n"}
+                        {"                        "}placeat{"\n"}
+                        {"                        "}consequatur reprehenderit.
+                        Ratione tenetur eligendi, quis{"\n"}
+                        {"                        "}aperiam dolores magni iusto
+                        distinctio voluptatibus minus a{"\n"}
+                        {"                        "}unde{"\n"}
+                        {"                        "}at! Consequatur voluptatum
+                        in eaque obcaecati, impedit{"\n"}
+                        {"                        "}accusantium ea soluta,
+                        excepturi, quasi quia commodi{"\n"}
+                        {"                        "}blanditiis?{"\n"}
+                        {"                        "}Qui blanditiis iusto
+                        corrupti necessitatibus dolorem fugiat{"\n"}
+                        {"                        "}consequuntur quod quo
+                        veniam? Labore dignissimos reiciendis{"\n"}
+                        {"                        "}accusamus recusandae est
+                        consequuntur iure.&lt;/p&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;br&gt;{"\n"}
+                        {"                    "}&lt;p&gt;Lorem ipsum dolor sit
+                        amet.&lt;/p&gt;{"\n"}
+                        {"                "}&lt;/div&gt;{"\n"}
+                        {"                "}&lt;div class="modal-footer"&gt;
+                        {"\n"}
+                        {"                    "}&lt;button type="button"
+                        class="btn btn-secondary"{"\n"}
+                        {"                        "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
+                        {"                    "}&lt;button type="button"
+                        class="btn btn-primary"&gt;Save{"\n"}
+                        {"                        "}Changes&lt;/button&gt;{"\n"}
+                        {"                "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;/div&gt;
                       </code>
                     </pre>
                     {/* Prism Code */}
@@ -3883,18 +3782,10 @@ export default function Accordions_collpase() {
             {/* End:: row-1 */}
             {/* Start:: row-2 */}
             <div className="row">
-              <div className="col-xl-12">
+              <div className="col-xl-4">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">
-                      Flush Accordion
-                      <p className="subtitle text-muted fs-12 fw-normal">
-                        Add <code>.accordion-flush</code> to remove the default
-                        <code>background-color</code>, some borders, and some
-                        rounded corners to render accordions edge-to-edge with
-                        their parent container.
-                      </p>
-                    </div>
+                    <div className="card-title">Vertically centered modal</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -3902,97 +3793,59 @@ export default function Accordions_collpase() {
                       </button>
                     </div>
                   </div>
-                  <div className="card-body p-0">
-                    <div
-                      className="accordion accordion-flush"
-                      id="accordionFlushExample"
+                  <div className="card-body">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModalScrollable2"
                     >
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingOne">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseOne"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingOne"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Placeholder content for this accordion, which is
-                            intended to demonstrate the{" "}
-                            <code>.accordion-flush</code> class. This is the
-                            first item's accordion body.
+                      Vertically centered modal
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="exampleModalScrollable2"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalScrollable2"
+                      data-bs-keyboard="false"
+                      aria-hidden="true"
+                    >
+                      {/* Scrollable modal */}
+                      <div className="modal-dialog modal-dialog-centered">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="staticBackdropLabel2"
+                            >
+                              Modal title
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingTwo">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingTwo"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Placeholder content for this accordion, which is
-                            intended to demonstrate the{" "}
-                            <code>.accordion-flush</code> class. This is the
-                            second item's accordion body. Let's imagine this
-                            being filled with some actual content.
+                          <div className="modal-body">
+                            <p>
+                              Lorem ipsum dolor sit, amet consectetur
+                              adipisicing elit. Libero ipsum quasi, error
+                              quibusdam debitis maiores hic eum? Vitae nisi ipsa
+                              maiores fugiat deleniti quis reiciendis veritatis.
+                            </p>
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="flush-headingThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingThree"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Placeholder content for this accordion, which is
-                            intended to demonstrate the{" "}
-                            <code>.accordion-flush</code> class. This is the
-                            third item's accordion body. Nothing more exciting
-                            happening here in terms of content, but just filling
-                            up the space to make it look, at least at first
-                            glance, a bit more representative of how this would
-                            look in a real-world application.
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Save Changes
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -4002,110 +3855,420 @@ export default function Accordions_collpase() {
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion accordion-flush"
-                        id="accordionFlushExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="flush-headingOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseOne"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="flush-collapseOne"&gt;{"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="flush-collapseOne"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="flush-headingOne"
-                        data-bs-parent="#accordionFlushExample"&gt;{"\n"}
-                        {"            "}&lt;div
-                        class="accordion-body"&gt;Placeholder content for this
-                        accordion,{"\n"}
-                        {"                "}which is{"\n"}
-                        {"                "}intended to demonstrate the
-                        &lt;code&gt;.accordion-flush&lt;/code&gt; class.{"\n"}
-                        {"                "}This is{"\n"}
-                        {"                "}the{"\n"}
-                        {"                "}first item's accordion
-                        body.&lt;/div&gt;
+                        &lt;button type="button" class="btn btn-primary"
+                        data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#exampleModalScrollable2"&gt;
+                        {"\n"}
+                        {"    "}Vertically centered modal{"\n"}&lt;/button&gt;
+                        {"\n"}
+                        &lt;div class="modal fade" id="exampleModalScrollable2"
+                        tabindex="-1"{"\n"}
+                        aria-labelledby="exampleModalScrollable2"
+                        data-bs-keyboard="false"{"\n"}aria-hidden="true"&gt;
+                        {"\n"}
+                        &lt;!-- Scrollable modal --&gt;{"\n"}&lt;div
+                        class="modal-dialog modal-dialog-centered"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="staticBackdropLabel2"&gt;Modal title{"\n"}
+                        {"            "}&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                "}
+                        aria-label="Close"&gt;&lt;/button&gt;
                         {"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="flush-headingTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="flush-collapseTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="flush-collapseTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="flush-headingTwo"
-                        data-bs-parent="#accordionFlushExample"&gt;{"\n"}
-                        {"            "}&lt;div
-                        class="accordion-body"&gt;Placeholder content for this
-                        accordion,{"\n"}
-                        {"                "}which is{"\n"}
-                        {"                "}intended to demonstrate the
-                        &lt;code&gt;.accordion-flush&lt;/code&gt; class.{"\n"}
-                        {"                "}This is{"\n"}
-                        {"                "}the{"\n"}
-                        {"                "}second item's accordion body. Let's
-                        imagine this being filled{"\n"}
-                        {"                "}with{"\n"}
-                        {"                "}some{"\n"}
-                        {"                "}actual content.&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}&lt;p&gt;Lorem ipsum dolor sit, amet
+                        consectetur adipisicing elit.{"\n"}
+                        {"                "}Libero{"\n"}
+                        {"                "}ipsum quasi, error quibusdam debitis
+                        maiores hic eum? Vitae{"\n"}
+                        {"                "}nisi{"\n"}
+                        {"                "}ipsa maiores fugiat deleniti quis
+                        reiciendis veritatis.&lt;/p&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="flush-headingThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#flush-collapseThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="flush-collapseThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="flush-collapseThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="flush-headingThree"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionFlushExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div
-                        class="accordion-body"&gt;Placeholder content for this
-                        accordion,{"\n"}
-                        {"                "}which is{"\n"}
-                        {"                "}intended to demonstrate the
-                        &lt;code&gt;.accordion-flush&lt;/code&gt; class.{"\n"}
-                        {"                "}This is{"\n"}
-                        {"                "}the{"\n"}
-                        {"                "}third item's accordion body. Nothing
-                        more exciting happening{"\n"}
-                        {"                "}here in{"\n"}
-                        {"                "}terms{"\n"}
-                        {"                "}of content, but just filling up the
-                        space to make it look, at{"\n"}
-                        {"                "}least{"\n"}
-                        {"                "}at{"\n"}
-                        {"                "}first{"\n"}
-                        {"                "}glance, a bit more representative of
-                        how this would look in a{"\n"}
-                        {"                "}real-world{"\n"}
-                        {"                "}application.&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"            "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
+                        {"            "}&lt;button type="button" class="btn
+                        btn-primary"&gt;Save{"\n"}
+                        {"                "}Changes&lt;/button&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                      </code>
+                    </pre>
+                    {/* Prism Code */}
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4">
+                <div className="card custom-card">
+                  <div className="card-header justify-content-between">
+                    <div className="card-title">
+                      Vertical Centered Scrollable
+                    </div>
+                    <div className="prism-toggle">
+                      <button className="btn btn-sm btn-primary-light">
+                        Show Code
+                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="card-body">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModalScrollable3"
+                    >
+                      Vertically centered scrollable modal
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="exampleModalScrollable3"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalScrollable3"
+                      data-bs-keyboard="false"
+                      aria-hidden="true"
+                    >
+                      {/* Scrollable modal */}
+                      <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="staticBackdropLabel3"
+                            >
+                              Modal title
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">
+                            <p>
+                              Lorem ipsum dolor sit amet consectetur,
+                              adipisicing elit. Ea voluptatibus, ipsam quo est
+                              rerum modi quos expedita facere, ex tempore fuga
+                              similique ipsa blanditiis et accusamus temporibus
+                              commodi voluptas! Nobis veniam illo architecto
+                              expedita quam ratione quaerat omnis. In,
+                              recusandae eos! Pariatur, deleniti quis ad nemo
+                              ipsam officia temporibus, doloribus fuga
+                              asperiores ratione distinctio velit alias hic modi
+                              praesentium aperiam officiis eaque, accusamus aut.
+                              Accusantium assumenda, commodi nulla provident
+                              asperiores fugit inventore iste amet aut placeat
+                              consequatur reprehenderit. Ratione tenetur
+                              eligendi, quis aperiam dolores magni iusto
+                              distinctio voluptatibus minus a unde at!
+                              Consequatur voluptatum in eaque obcaecati, impedit
+                              accusantium ea soluta, excepturi, quasi quia
+                              commodi blanditiis? Qui blanditiis iusto corrupti
+                              necessitatibus dolorem fugiat consequuntur quod
+                              quo veniam? Labore dignissimos reiciendis
+                              accusamus recusandae est consequuntur iure.
+                            </p>
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <br />
+                            <p>Lorem ipsum dolor sit amet.</p>
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Save Changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-footer d-none border-top-0">
+                    {/* Prism Code */}
+                    <pre className="language-html">
+                      <code className="language-html">
+                        &lt;button type="button" class="btn btn-primary"
+                        data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#exampleModalScrollable3"&gt;
+                        {"\n"}
+                        {"    "}Vertically centered scrollable modal{"\n"}
+                        &lt;/button&gt;{"\n"}&lt;div class="modal fade"
+                        id="exampleModalScrollable3" tabindex="-1"{"\n"}
+                        aria-labelledby="exampleModalScrollable3"
+                        data-bs-keyboard="false"{"\n"}aria-hidden="true"&gt;
+                        {"\n"}
+                        &lt;!-- Scrollable modal --&gt;{"\n"}&lt;div
+                        class="modal-dialog modal-dialog-centered
+                        modal-dialog-scrollable"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="staticBackdropLabel3"&gt;Modal title{"\n"}
+                        {"            "}&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                "}
+                        aria-label="Close"&gt;&lt;/button&gt;
+                        {"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}&lt;p&gt;Lorem ipsum dolor sit amet
+                        consectetur, adipisicing elit. Ea{"\n"}
+                        {"                "}voluptatibus, ipsam quo est rerum
+                        modi quos expedita facere,{"\n"}
+                        {"                "}ex{"\n"}
+                        {"                "}tempore fuga similique ipsa
+                        blanditiis et accusamus{"\n"}
+                        {"                "}temporibus{"\n"}
+                        {"                "}commodi voluptas! Nobis veniam illo
+                        architecto expedita quam{"\n"}
+                        {"                "}ratione quaerat omnis. In,
+                        recusandae eos! Pariatur,{"\n"}
+                        {"                "}deleniti{"\n"}
+                        {"                "}quis ad nemo ipsam officia
+                        temporibus, doloribus fuga{"\n"}
+                        {"                "}asperiores{"\n"}
+                        {"                "}ratione distinctio velit alias hic
+                        modi praesentium aperiam{"\n"}
+                        {"                "}officiis eaque, accusamus aut.
+                        Accusantium assumenda,{"\n"}
+                        {"                "}commodi{"\n"}
+                        {"                "}nulla provident asperiores fugit
+                        inventore iste amet aut{"\n"}
+                        {"                "}placeat{"\n"}
+                        {"                "}consequatur reprehenderit. Ratione
+                        tenetur eligendi, quis{"\n"}
+                        {"                "}aperiam dolores magni iusto
+                        distinctio voluptatibus minus a{"\n"}
+                        {"                "}unde{"\n"}
+                        {"                "}at! Consequatur voluptatum in eaque
+                        obcaecati, impedit{"\n"}
+                        {"                "}accusantium ea soluta, excepturi,
+                        quasi quia commodi{"\n"}
+                        {"                "}blanditiis?{"\n"}
+                        {"                "}Qui blanditiis iusto corrupti
+                        necessitatibus dolorem fugiat{"\n"}
+                        {"                "}consequuntur quod quo veniam? Labore
+                        dignissimos reiciendis{"\n"}
+                        {"                "}accusamus recusandae est
+                        consequuntur iure.&lt;/p&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;br&gt;{"\n"}
+                        {"            "}&lt;p&gt;Lorem ipsum dolor sit
+                        amet.&lt;/p&gt;{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"            "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
+                        {"            "}&lt;button type="button" class="btn
+                        btn-primary"&gt;Save{"\n"}
+                        {"                "}Changes&lt;/button&gt;{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                      </code>
+                    </pre>
+                    {/* Prism Code */}
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4">
+                <div className="card custom-card">
+                  <div className="card-header justify-content-between">
+                    <div className="card-title">Tooltips and popovers</div>
+                    <div className="prism-toggle">
+                      <button className="btn btn-sm btn-primary-light">
+                        Show Code
+                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="card-body">
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModalScrollable4"
+                    >
+                      Launch demo modal
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="exampleModalScrollable4"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalScrollable4"
+                      data-bs-keyboard="false"
+                      aria-hidden="true"
+                    >
+                      {/* Scrollable modal */}
+                      <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="staticBackdropLabel4"
+                            >
+                              Modal title
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">
+                            <h5>Popover in a modal</h5>
+                            <p>
+                              This{" "}
+                              <a
+                                href="#"
+                                role="button"
+                                className="btn btn-secondary"
+                                data-bs-toggle="popover"
+                                title="Popover title"
+                                data-bs-custom-class="modal-popover"
+                                data-bs-content="Popover body content is set in this attribute."
+                              >
+                                button
+                              </a>
+                              triggers a popover on click.
+                            </p>
+                            <hr />
+                            <h5>Tooltips in a modal</h5>
+                            <p>
+                              <a
+                                href="#"
+                                className="text-primary"
+                                data-bs-toggle="tooltip"
+                                title="Tooltip"
+                              >
+                                This link
+                              </a>{" "}
+                              and{" "}
+                              <a
+                                href="#"
+                                className="text-primary"
+                                data-bs-toggle="tooltip"
+                                title="Tooltip"
+                              >
+                                that link
+                              </a>{" "}
+                              have tooltips on hover.
+                            </p>
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Save Changes
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-footer d-none border-top-0">
+                    {/* Prism Code */}
+                    <pre className="language-html">
+                      <code className="language-html">
+                        &lt;button type="button" class="btn btn-primary"
+                        data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#exampleModalScrollable4"&gt;
+                        {"\n"}
+                        {"    "}Launch demo modal{"\n"}&lt;/button&gt;{"\n"}
+                        &lt;div class="modal fade" id="exampleModalScrollable4"
+                        tabindex="-1"{"\n"}
+                        aria-labelledby="exampleModalScrollable4"
+                        data-bs-keyboard="false"{"\n"}aria-hidden="true"&gt;
+                        {"\n"}
+                        &lt;!-- Scrollable modal --&gt;{"\n"}&lt;div
+                        class="modal-dialog modal-dialog-centered
+                        modal-dialog-scrollable"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="staticBackdropLabel4"&gt;Modal title{"\n"}
+                        {"            "}&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                "}
+                        aria-label="Close"&gt;&lt;/button&gt;
+                        {"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}&lt;h5&gt;Popover in a modal&lt;/h5&gt;
+                        {"\n"}
+                        {"            "}&lt;p&gt;This &lt;a href="#"
+                        role="button" class="btn btn-secondary"{"\n"}
+                        {"                    "}data-bs-toggle="popover"
+                        title="Popover title"{"\n"}
+                        {"                    "}data-bs-content="Popover body
+                        content is set in this attribute."&gt;button&lt;/a&gt;
+                        {"\n"}
+                        {"                "}triggers a popover on
+                        click.&lt;/p&gt;
+                        {"\n"}
+                        {"            "}&lt;hr&gt;{"\n"}
+                        {"            "}&lt;h5&gt;Tooltips in a modal&lt;/h5&gt;
+                        {"\n"}
+                        {"            "}&lt;p&gt;&lt;a href="#"
+                        class="text-primary" data-bs-toggle="tooltip"
+                        title="Tooltip"&gt;This{"\n"}
+                        {"                    "}link&lt;/a&gt; and &lt;a
+                        href="#" class="text-primary" data-bs-toggle="tooltip"
+                        {"\n"}
+                        {"                    "}title="Tooltip"&gt;that
+                        link&lt;/a&gt; have tooltips on hover.{"\n"}
+                        {"            "}&lt;/p&gt;{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"            "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
+                        {"            "}&lt;button type="button" class="btn
+                        btn-primary"&gt;Save{"\n"}
+                        {"                "}Changes&lt;/button&gt;{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
                       </code>
                     </pre>
                     {/* Prism Code */}
@@ -4115,12 +4278,11 @@ export default function Accordions_collpase() {
             </div>
             {/* End:: row-2 */}
             {/* Start:: row-3 */}
-            <h6 className="mb-3">Light Colors:</h6>
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-4">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">Primary</div>
+                    <div className="card-title">Using the grid</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -4129,118 +4291,87 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
-                    <div
-                      className="accordion accordion-primary"
-                      id="accordionPrimaryExample"
+                    <button
+                      type="button"
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModalScrollable5"
                     >
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingPrimaryOne">
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsePrimaryOne"
-                            aria-expanded="true"
-                            aria-controls="collapsePrimaryOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsePrimaryOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingPrimaryOne"
-                          data-bs-parent="#accordionPrimaryExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                      Launch demo modal
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="exampleModalScrollable5"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalScrollable5"
+                      data-bs-keyboard="false"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="staticBackdropLabel5"
+                            >
+                              Modal title
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            ></button>
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingPrimaryTwo">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsePrimaryTwo"
-                            aria-expanded="false"
-                            aria-controls="collapsePrimaryTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsePrimaryTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingPrimaryTwo"
-                          data-bs-parent="#accordionPrimaryExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                          <div className="modal-body">
+                            <div className="container-fluid">
+                              <div className="row">
+                                <div className="col-md-4 bg-light border">
+                                  .col-md-4
+                                </div>
+                                <div className="col-md-4 ms-auto bg-light border">
+                                  .col-md-4 .ms-auto
+                                </div>
+                              </div>
+                              <div className="row mt-3">
+                                <div className="col-md-3 ms-auto bg-light border">
+                                  .col-md-3 .ms-auto
+                                </div>
+                                <div className="col-md-2 ms-auto bg-light border">
+                                  .col-md-2 .ms-auto
+                                </div>
+                              </div>
+                              <div className="row mt-3">
+                                <div className="col-md-6 ms-auto bg-light border">
+                                  .col-md-6 .ms-auto
+                                </div>
+                              </div>
+                              <div className="row mt-3">
+                                <div className="col-sm-9 bg-light border">
+                                  Level 1: .col-sm-9
+                                  <div className="row">
+                                    <div className="col-8 col-sm-6 bg-light border">
+                                      Level 2: .col-8 .col-sm-6
+                                    </div>
+                                    <div className="col-4 col-sm-6 bg-light border">
+                                      Level 2: .col-4 .col-sm-6
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingPrimaryThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsePrimaryThree"
-                            aria-expanded="false"
-                            aria-controls="collapsePrimaryThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsePrimaryThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingPrimaryThree"
-                          data-bs-parent="#accordionPrimaryExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Save Changes
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -4250,133 +4381,110 @@ export default function Accordions_collpase() {
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion accordion-primary"
-                        id="accordionPrimaryExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingPrimaryOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}data-bs-target="#collapsePrimaryOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}
-                        aria-controls="collapsePrimaryOne"&gt;
+                        &lt;button type="button" class="btn btn-primary"
+                        data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#exampleModalScrollable5"&gt;
                         {"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsePrimaryOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}aria-labelledby="headingPrimaryOne"
+                        {"    "}Launch demo modal{"\n"}
+                        {"    "}&lt;/button&gt;{"\n"}
+                        {"    "}&lt;div class="modal fade"
+                        id="exampleModalScrollable5" tabindex="-1"{"\n"}
+                        {"        "}aria-labelledby="exampleModalScrollable5"
+                        data-bs-keyboard="false"{"\n"}
+                        {"        "}aria-hidden="true"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-dialog
+                        modal-dialog-centered modal-dialog-scrollable"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"                "}&lt;div class="modal-header"&gt;
                         {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionPrimaryExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
+                        {"                    "}&lt;h6 class="modal-title"
+                        id="staticBackdropLabel5"&gt;Modal title{"\n"}
+                        {"                    "}&lt;/h6&gt;{"\n"}
+                        {"                    "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                        "}aria-label="Close"&gt;{"\n"}
+                        {"                    "}&lt;/button&gt;{"\n"}
+                        {"                "}&lt;/div&gt;{"\n"}
+                        {"                "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                    "}&lt;div
+                        class="container-fluid"&gt;
                         {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
+                        {"                        "}&lt;div class="row"&gt;
+                        {"\n"}
+                        {"                            "}&lt;div class="col-md-4
+                        bg-light border"&gt;.col-md-4&lt;/div&gt;{"\n"}
+                        {"                            "}&lt;div class="col-md-4
+                        ms-auto bg-light border"&gt;.col-md-4{"\n"}
+                        {"                                "}.ms-auto&lt;/div&gt;
+                        {"\n"}
+                        {"                        "}&lt;/div&gt;{"\n"}
+                        {"                        "}&lt;div class="row mt-3"&gt;
+                        {"\n"}
+                        {"                            "}&lt;div class="col-md-3
+                        ms-auto bg-light border"&gt;.col-md-3{"\n"}
+                        {"                                "}.ms-auto&lt;/div&gt;
+                        {"\n"}
+                        {"                            "}&lt;div class="col-md-2
+                        ms-auto bg-light border"&gt;.col-md-2{"\n"}
+                        {"                                "}.ms-auto&lt;/div&gt;
+                        {"\n"}
+                        {"                        "}&lt;/div&gt;{"\n"}
+                        {"                        "}&lt;div class="row mt-3"&gt;
+                        {"\n"}
+                        {"                            "}&lt;div class="col-md-6
+                        ms-auto bg-light border"&gt;.col-md-6{"\n"}
+                        {"                                "}.ms-auto&lt;/div&gt;
+                        {"\n"}
+                        {"                        "}&lt;/div&gt;{"\n"}
+                        {"                        "}&lt;div class="row mt-3"&gt;
+                        {"\n"}
+                        {"                            "}&lt;div class="col-sm-9
+                        bg-light border"&gt;{"\n"}
+                        {"                                "}Level 1: .col-sm-9
+                        {"\n"}
+                        {"                                "}&lt;div
+                        class="row"&gt;
+                        {"\n"}
+                        {"                                    "}&lt;div
+                        class="col-8 col-sm-6 bg-light border"&gt;{"\n"}
+                        {"                                        "}Level 2:
+                        .col-8 .col-sm-6{"\n"}
+                        {"                                    "}&lt;/div&gt;
+                        {"\n"}
+                        {"                                    "}&lt;div
+                        class="col-4 col-sm-6 bg-light border"&gt;{"\n"}
+                        {"                                        "}Level 2:
+                        .col-4 .col-sm-6{"\n"}
+                        {"                                    "}&lt;/div&gt;
+                        {"\n"}
+                        {"                                "}&lt;/div&gt;{"\n"}
+                        {"                            "}&lt;/div&gt;{"\n"}
+                        {"                        "}&lt;/div&gt;{"\n"}
+                        {"                    "}&lt;/div&gt;{"\n"}
+                        {"                "}&lt;/div&gt;{"\n"}
+                        {"                "}&lt;div class="modal-footer"&gt;
+                        {"\n"}
+                        {"                    "}&lt;button type="button"
+                        class="btn btn-secondary"{"\n"}
+                        {"                        "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
+                        {"                    "}&lt;button type="button"
+                        class="btn btn-primary"&gt;Save{"\n"}
+                        {"                        "}Changes&lt;/button&gt;{"\n"}
+                        {"                "}&lt;/div&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingPrimaryTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapsePrimaryTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapsePrimaryTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsePrimaryTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingPrimaryTwo"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionPrimaryExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingPrimaryThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapsePrimaryThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapsePrimaryThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsePrimaryThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingPrimaryThree"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionPrimaryExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        {"    "}&lt;/div&gt;
                       </code>
                     </pre>
                     {/* Prism Code */}
                   </div>
                 </div>
               </div>
-              <div className="col-xl-6">
+              <div className="col-xl-4">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">Secondary</div>
+                    <div className="card-title">Toggle between modals</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -4385,124 +4493,90 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
-                    <div
-                      className="accordion accordion-secondary"
-                      id="accordionSecondaryExample"
+                    <a
+                      className="btn btn-primary"
+                      data-bs-toggle="modal"
+                      href="#exampleModalToggle"
+                      role="button"
                     >
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingSecondaryOne"
-                        >
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSecondaryOne"
-                            aria-expanded="true"
-                            aria-controls="collapseSecondaryOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSecondaryOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingSecondaryOne"
-                          data-bs-parent="#accordionSecondaryExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                      Open first modal
+                    </a>
+                    <div
+                      className="modal fade"
+                      id="exampleModalToggle"
+                      aria-labelledby="exampleModalToggleLabel"
+                      tabIndex={-1}
+                      aria-hidden="true"
+                      style={{ display: "none" }}
+                    >
+                      <div className="modal-dialog modal-dialog-centered">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalToggleLabel"
+                            >
+                              Modal 1
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">
+                            Show a second modal and hide this one with the
+                            button below.
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              className="btn btn-primary"
+                              data-bs-target="#exampleModalToggle2"
+                              data-bs-toggle="modal"
+                            >
+                              Open second modal
+                            </button>
                           </div>
                         </div>
                       </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingSecondaryTwo"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSecondaryTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseSecondaryTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSecondaryTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingSecondaryTwo"
-                          data-bs-parent="#accordionSecondaryExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                    </div>
+                    <div
+                      className="modal fade"
+                      id="exampleModalToggle2"
+                      aria-labelledby="exampleModalToggleLabel2"
+                      tabIndex={-1}
+                      aria-hidden="true"
+                      style={{ display: "none" }}
+                    >
+                      <div className="modal-dialog modal-dialog-centered">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalToggleLabel2"
+                            >
+                              Modal 2
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingSecondaryThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSecondaryThree"
-                            aria-expanded="false"
-                            aria-controls="collapseSecondaryThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSecondaryThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingSecondaryThree"
-                          data-bs-parent="#accordionSecondaryExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                          <div className="modal-body">
+                            Hide this modal and show the first with the button
+                            below.
+                          </div>
+                          <div className="modal-footer">
+                            <button
+                              className="btn btn-primary"
+                              data-bs-target="#exampleModalToggle"
+                              data-bs-toggle="modal"
+                            >
+                              Back to first
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -4512,124 +4586,265 @@ export default function Accordions_collpase() {
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion accordion-secondary"
-                        id="accordionSecondaryExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingSecondaryOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
+                        &lt;a class="btn btn-primary" data-bs-toggle="modal"
+                        href="#exampleModalToggle"{"\n"}
+                        {"    "}role="button"&gt;Open first modal{"\n"}
+                        &lt;/a&gt;
+                        {"\n"}&lt;div class="modal fade" id="exampleModalToggle"
+                        {"\n"}aria-labelledby="exampleModalToggleLabel"
+                        tabindex="-1" aria-hidden="true"{"\n"}style="display:
+                        none;"&gt;{"\n"}&lt;div class="modal-dialog
+                        modal-dialog-centered"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="exampleModalToggleLabel"&gt;Modal 1{"\n"}
+                        {"            "}&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
                         {"                "}
-                        data-bs-target="#collapseSecondaryOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}
-                        aria-controls="collapseSecondaryOne"&gt;
+                        aria-label="Close"&gt;&lt;/button&gt;
                         {"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseSecondaryOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}aria-labelledby="headingSecondaryOne"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionSecondaryExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingSecondaryTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseSecondaryTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapseSecondaryTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseSecondaryTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingSecondaryTwo"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionSecondaryExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}Show a second modal and hide this one
+                        with the button below.{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingSecondaryThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseSecondaryThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapseSecondaryThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseSecondaryThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingSecondaryThree"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionSecondaryExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
+                        {"        "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"            "}&lt;button class="btn btn-primary"{"\n"}
                         {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
+                        data-bs-target="#exampleModalToggle2"
+                        {"\n"}
+                        {"                "}data-bs-toggle="modal"&gt;Open
+                        second modal&lt;/button&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        {"\n"}&lt;div class="modal fade"
+                        id="exampleModalToggle2"
+                        {"\n"}aria-labelledby="exampleModalToggleLabel2"
+                        tabindex="-1" aria-hidden="true"{"\n"}style="display:
+                        none;"&gt;{"\n"}&lt;div class="modal-dialog
+                        modal-dialog-centered"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="exampleModalToggleLabel2"&gt;Modal 2{"\n"}
+                        {"            "}&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                "}
+                        aria-label="Close"&gt;&lt;/button&gt;
+                        {"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}Hide this modal and show the first with
+                        the button below.{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"            "}&lt;button class="btn btn-primary"
+                        data-bs-target="#exampleModalToggle"{"\n"}
+                        {"                "}data-bs-toggle="modal"&gt;Back to
+                        first&lt;/button&gt;{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                      </code>
+                    </pre>
+                    {/* Prism Code */}
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4">
+                <div className="card custom-card">
+                  <div className="card-header justify-content-between">
+                    <div className="card-title">Optional sizes</div>
+                    <div className="prism-toggle">
+                      <button className="btn btn-sm btn-primary-light">
+                        Show Code
+                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="card-body">
+                    <button
+                      type="button"
+                      className="btn btn-primary m-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModalXl"
+                    >
+                      Extra large modal
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-primary-light m-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModalLg"
+                    >
+                      Large modal
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-primary-light m-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModalSm"
+                    >
+                      Small modal
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="exampleModalXl"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalXlLabel"
+                      style={{ display: "none" }}
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog modal-xl">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalXlLabel"
+                            >
+                              Extra large modal
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="modal fade"
+                      id="exampleModalLg"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalLgLabel"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog modal-lg">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalLgLabel"
+                            >
+                              Large modal
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="modal fade"
+                      id="exampleModalSm"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalSmLabel"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog modal-sm">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalSmLabel"
+                            >
+                              Small modal
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="card-footer d-none border-top-0">
+                    {/* Prism Code */}
+                    <pre className="language-html">
+                      <code className="language-html">
+                        &lt;button type="button" class="btn btn-primary mb-sm-0
+                        mb-1" data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#exampleModalXl"&gt;Extra large
+                        modal&lt;/button&gt;{"\n"}&lt;button type="button"
+                        class="btn btn-primary-light mb-sm-0 mb-1"
+                        data-bs-toggle="modal"{"\n"}
+                        data-bs-target="#exampleModalLg"&gt;Large
+                        modal&lt;/button&gt;{"\n"}&lt;button type="button"
+                        class="btn btn-primary-light" data-bs-toggle="modal"
+                        {"\n"}
+                        data-bs-target="#exampleModalSm"&gt;Small
+                        modal&lt;/button&gt;{"\n"}&lt;div class="modal fade"
+                        id="exampleModalXl" tabindex="-1"{"\n"}
+                        aria-labelledby="exampleModalXlLabel" style="display:
+                        none;" aria-hidden="true"&gt;{"\n"}&lt;div
+                        class="modal-dialog modal-xl"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="exampleModalXlLabel"&gt;Extra large{"\n"}
+                        {"                "}modal&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                "}
+                        aria-label="Close"&gt;&lt;/button&gt;
+                        {"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}...{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        {"\n"}&lt;div class="modal fade" id="exampleModalLg"
+                        tabindex="-1"{"\n"}aria-labelledby="exampleModalLgLabel"
+                        aria-hidden="true"&gt;{"\n"}&lt;div class="modal-dialog
+                        modal-lg"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="exampleModalLgLabel"&gt;Large modal{"\n"}
+                        {"            "}&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                "}
+                        aria-label="Close"&gt;&lt;/button&gt;
+                        {"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}...{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        {"\n"}&lt;div class="modal fade" id="exampleModalSm"
+                        tabindex="-1"{"\n"}aria-labelledby="exampleModalSmLabel"
+                        aria-hidden="true"&gt;{"\n"}&lt;div class="modal-dialog
+                        modal-sm"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="exampleModalSmLabel"&gt;Small modal{"\n"}
+                        {"            "}&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                "}
+                        aria-label="Close"&gt;&lt;/button&gt;
+                        {"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}...{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
                       </code>
                     </pre>
                     {/* Prism Code */}
@@ -4639,12 +4854,11 @@ export default function Accordions_collpase() {
             </div>
             {/* End:: row-3 */}
             {/* Start:: row-4 */}
-            <h6 className="mb-3">Solid Colors:</h6>
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-12">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">Primary</div>
+                    <div className="card-title">Fullscreen modal</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -4653,124 +4867,274 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
+                    <div className="bd-example">
+                      <button
+                        type="button"
+                        className="btn btn-primary mb-1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModalFullscreen"
+                      >
+                        Full screen
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-secondary mb-1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModalFullscreenSm"
+                      >
+                        Full screen below sm
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-warning mb-1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModalFullscreenMd"
+                      >
+                        Full screen below md
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-info mb-1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModalFullscreenLg"
+                      >
+                        Full screen below lg
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-success mb-1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModalFullscreenXl"
+                      >
+                        Full screen below xl
+                      </button>
+                      <button
+                        type="button"
+                        className="btn btn-danger mb-1"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModalFullscreenXxl"
+                      >
+                        Full screen below xxl
+                      </button>
+                    </div>
                     <div
-                      className="accordion accordion-solid-primary"
-                      id="accordionPrimarySolidExample"
+                      className="modal fade"
+                      id="exampleModalFullscreen"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalFullscreenLabel"
+                      aria-hidden="true"
+                      style={{ display: "none" }}
                     >
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingPrimarySolidOne"
-                        >
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsePrimarySolidOne"
-                            aria-expanded="true"
-                            aria-controls="collapsePrimarySolidOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsePrimarySolidOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingPrimarySolidOne"
-                          data-bs-parent="#accordionPrimarySolidExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                      <div className="modal-dialog modal-fullscreen">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalFullscreenLabel"
+                            >
+                              Full screen modal
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
                           </div>
                         </div>
                       </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingPrimarySolidTwo"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsePrimarySolidTwo"
-                            aria-expanded="false"
-                            aria-controls="collapsePrimarySolidTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsePrimarySolidTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingPrimarySolidTwo"
-                          data-bs-parent="#accordionPrimarySolidExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                    </div>
+                    <div
+                      className="modal fade"
+                      id="exampleModalFullscreenSm"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalFullscreenSmLabel"
+                      aria-hidden="true"
+                      style={{ display: "none" }}
+                    >
+                      <div className="modal-dialog modal-fullscreen-sm-down">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalFullscreenSmLabel"
+                            >
+                              Full screen below sm
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
                           </div>
                         </div>
                       </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingPrimarySolidThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsePrimarySolidThree"
-                            aria-expanded="false"
-                            aria-controls="collapsePrimarySolidThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsePrimarySolidThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingPrimarySolidThree"
-                          data-bs-parent="#accordionPrimarySolidExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                    </div>
+                    <div
+                      className="modal fade"
+                      id="exampleModalFullscreenMd"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalFullscreenMdLabel"
+                      aria-hidden="true"
+                      style={{ display: "none" }}
+                    >
+                      <div className="modal-dialog modal-fullscreen-md-down">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalFullscreenMdLabel"
+                            >
+                              Full screen below md
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="modal fade"
+                      id="exampleModalFullscreenLg"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalFullscreenLgLabel"
+                      aria-hidden="true"
+                      style={{ display: "none" }}
+                    >
+                      <div className="modal-dialog modal-fullscreen-lg-down">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalFullscreenLgLabel"
+                            >
+                              Full screen below lg
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="modal fade"
+                      id="exampleModalFullscreenXl"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalFullscreenXlLabel"
+                      aria-hidden="true"
+                      style={{ display: "none" }}
+                    >
+                      <div className="modal-dialog modal-fullscreen-xl-down">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalFullscreenXlLabel"
+                            >
+                              Full screen below xl
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      className="modal fade"
+                      id="exampleModalFullscreenXxl"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalFullscreenXxlLabel"
+                      aria-hidden="true"
+                      style={{ display: "none" }}
+                    >
+                      <div className="modal-dialog modal-fullscreen-xxl-down">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6
+                              className="modal-title"
+                              id="exampleModalFullscreenXxlLabel"
+                            >
+                              Full screen below xxl
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
+                          </div>
+                          <div className="modal-body">...</div>
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -4780,389 +5144,210 @@ export default function Accordions_collpase() {
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion accordion-solid-primary"
-                        id="accordionPrimarySolidExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingPrimarySolidOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}
-                        data-bs-target="#collapsePrimarySolidOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}
-                        aria-controls="collapsePrimarySolidOne"&gt;{"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsePrimarySolidOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}aria-labelledby="headingPrimarySolidOne"
+                        &lt;div class="bd-example"&gt;{"\n"}
+                        {"    "}&lt;button type="button" class="btn btn-primary
+                        mb-1" data-bs-toggle="modal"{"\n"}
+                        {"        "}
+                        data-bs-target="#exampleModalFullscreen"&gt;Full
+                        screen&lt;/button&gt;{"\n"}
+                        {"    "}&lt;button type="button" class="btn
+                        btn-secondary mb-1" data-bs-toggle="modal"{"\n"}
+                        {"        "}
+                        data-bs-target="#exampleModalFullscreenSm"&gt;Full
+                        screen below sm&lt;/button&gt;{"\n"}
+                        {"    "}&lt;button type="button" class="btn btn-warning
+                        mb-1" data-bs-toggle="modal"{"\n"}
+                        {"        "}
+                        data-bs-target="#exampleModalFullscreenMd"&gt;Full
+                        screen below md&lt;/button&gt;{"\n"}
+                        {"    "}&lt;button type="button" class="btn btn-info
+                        mb-1" data-bs-toggle="modal"{"\n"}
+                        {"        "}
+                        data-bs-target="#exampleModalFullscreenLg"&gt;Full
+                        screen below lg&lt;/button&gt;{"\n"}
+                        {"    "}&lt;button type="button" class="btn btn-success
+                        mb-1" data-bs-toggle="modal"{"\n"}
+                        {"        "}
+                        data-bs-target="#exampleModalFullscreenXl"&gt;Full
+                        screen below xl&lt;/button&gt;{"\n"}
+                        {"    "}&lt;button type="button" class="btn btn-danger
+                        mb-1" data-bs-toggle="modal"{"\n"}
+                        {"        "}
+                        data-bs-target="#exampleModalFullscreenXxl"&gt;Full
+                        screen below{"\n"}
+                        {"        "}xxl&lt;/button&gt;{"\n"}&lt;/div&gt;{"\n"}
+                        &lt;div class="modal fade" id="exampleModalFullscreen"
+                        tabindex="-1"{"\n"}
+                        {"    "}aria-labelledby="exampleModalFullscreenLabel"
+                        aria-hidden="true"{"\n"}
+                        {"    "}style="display: none;"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog
+                        modal-fullscreen"&gt;
                         {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionPrimarySolidExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
+                        {"        "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6 class="modal-title"
+                        id="exampleModalFullscreenLabel"&gt;Full{"\n"}
+                        {"                    "}screen modal&lt;/h6&gt;{"\n"}
+                        {"                "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                    "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                "}...{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                    "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingPrimarySolidTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapsePrimarySolidTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapsePrimarySolidTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsePrimarySolidTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingPrimarySolidTwo"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionPrimarySolidExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;div
+                        class="modal fade" id="exampleModalFullscreenSm"
+                        tabindex="-1"{"\n"}
+                        {"    "}aria-labelledby="exampleModalFullscreenSmLabel"
+                        aria-hidden="true"{"\n"}
+                        {"    "}style="display: none;"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog
+                        modal-fullscreen-sm-down"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6 class="modal-title"
+                        id="exampleModalFullscreenSmLabel"&gt;{"\n"}
+                        {"                    "}Full{"\n"}
+                        {"                    "}screen below sm&lt;/h6&gt;{"\n"}
+                        {"                "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                    "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                "}...{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                    "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingPrimarySolidThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapsePrimarySolidThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapsePrimarySolidThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsePrimarySolidThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingPrimarySolidThree"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionPrimarySolidExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;div
+                        class="modal fade" id="exampleModalFullscreenMd"
+                        tabindex="-1"{"\n"}
+                        {"    "}aria-labelledby="exampleModalFullscreenMdLabel"
+                        aria-hidden="true"{"\n"}
+                        {"    "}style="display: none;"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog
+                        modal-fullscreen-md-down"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6 class="modal-title"
+                        id="exampleModalFullscreenMdLabel"&gt;{"\n"}
+                        {"                    "}Full{"\n"}
+                        {"                    "}screen below md&lt;/h6&gt;{"\n"}
+                        {"                "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                    "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                "}...{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                    "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
-                      </code>
-                    </pre>
-                    {/* Prism Code */}
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-6">
-                <div className="card custom-card">
-                  <div className="card-header justify-content-between">
-                    <div className="card-title">Secondary</div>
-                    <div className="prism-toggle">
-                      <button className="btn btn-sm btn-primary-light">
-                        Show Code
-                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="card-body">
-                    <div
-                      className="accordion accordion-solid-secondary"
-                      id="accordionSecondarySolidExample"
-                    >
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingSecondarySolidOne"
-                        >
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSecondarySolidOne"
-                            aria-expanded="true"
-                            aria-controls="collapseSecondarySolidOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSecondarySolidOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingSecondarySolidOne"
-                          data-bs-parent="#accordionSecondarySolidExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingSecondarySolidTwo"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSecondarySolidTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseSecondarySolidTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSecondarySolidTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingSecondarySolidTwo"
-                          data-bs-parent="#accordionSecondarySolidExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingSecondarySolidThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSecondarySolidThree"
-                            aria-expanded="false"
-                            aria-controls="collapseSecondarySolidThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSecondarySolidThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingSecondarySolidThree"
-                          data-bs-parent="#accordionSecondarySolidExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-footer d-none border-top-0">
-                    {/* Prism Code */}
-                    <pre className="language-html">
-                      <code className="language-html">
-                        &lt;div class="accordion accordion-solid-secondary"
-                        id="accordionSecondarySolidExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingSecondarySolidOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}
-                        data-bs-target="#collapseSecondarySolidOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}
-                        aria-controls="collapseSecondarySolidOne"&gt;{"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseSecondarySolidOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingSecondarySolidOne"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionSecondarySolidExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;div
+                        class="modal fade" id="exampleModalFullscreenLg"
+                        tabindex="-1"{"\n"}
+                        {"    "}aria-labelledby="exampleModalFullscreenLgLabel"
+                        aria-hidden="true"{"\n"}
+                        {"    "}style="display: none;"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog
+                        modal-fullscreen-lg-down"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6 class="modal-title"
+                        id="exampleModalFullscreenLgLabel"&gt;{"\n"}
+                        {"                    "}Full{"\n"}
+                        {"                    "}screen below lg&lt;/h6&gt;{"\n"}
+                        {"                "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                    "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                "}...{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                    "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingSecondarySolidTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseSecondarySolidTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapseSecondarySolidTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseSecondarySolidTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingSecondarySolidTwo"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionSecondarySolidExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;div
+                        class="modal fade" id="exampleModalFullscreenXl"
+                        tabindex="-1"{"\n"}
+                        {"    "}aria-labelledby="exampleModalFullscreenXlLabel"
+                        aria-hidden="true"{"\n"}
+                        {"    "}style="display: none;"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog
+                        modal-fullscreen-xl-down"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6 class="modal-title"
+                        id="exampleModalFullscreenXlLabel"&gt;{"\n"}
+                        {"                    "}Full{"\n"}
+                        {"                    "}screen below xl&lt;/h6&gt;{"\n"}
+                        {"                "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                    "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                "}...{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                    "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingSecondarySolidThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseSecondarySolidThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapseSecondarySolidThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseSecondarySolidThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingSecondarySolidThree"
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;div
+                        class="modal fade" id="exampleModalFullscreenXxl"
+                        tabindex="-1"{"\n"}
+                        {"    "}aria-labelledby="exampleModalFullscreenXxlLabel"
+                        aria-hidden="true"{"\n"}
+                        {"    "}style="display: none;"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog
+                        modal-fullscreen-xxl-down"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6 class="modal-title"
+                        id="exampleModalFullscreenXxlLabel"&gt;{"\n"}
+                        {"                    "}Full{"\n"}
+                        {"                    "}screen below xxl&lt;/h6&gt;
                         {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionSecondarySolidExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
+                        {"                "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
+                        {"                    "}
+                        aria-label="Close"&gt;&lt;/button&gt;{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"                "}...{"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
+                        {"                    "}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
                         {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
@@ -5175,12 +5360,11 @@ export default function Accordions_collpase() {
             </div>
             {/* End:: row-4 */}
             {/* Start:: row-5 */}
-            <h6 className="mb-3">Colored Borders:</h6>
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-12">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">Primary</div>
+                    <div className="card-title">Varying modal content</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -5189,124 +5373,94 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
-                    <div
-                      className="accordion accordion-border-primary accordions-items-seperate"
-                      id="accordionprimaryborderExample"
+                    <button
+                      type="button"
+                      className="btn btn-primary mb-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#formmodal"
+                      data-bs-whatever="@mdo"
                     >
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingborderprimaryOne"
-                        >
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#primaryBorderOne"
-                            aria-expanded="true"
-                            aria-controls="primaryBorderOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="primaryBorderOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingborderprimaryOne"
-                          data-bs-parent="#accordionprimaryborderExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                      Open modal for @mdo
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-secondary mb-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#formmodal"
+                      data-bs-whatever="@fat"
+                    >
+                      Open modal for @fat
+                    </button>
+                    <button
+                      type="button"
+                      className="btn btn-light mb-1"
+                      data-bs-toggle="modal"
+                      data-bs-target="#formmodal"
+                      data-bs-whatever="@getbootstrap"
+                    >
+                      Open modal for @getbootstrap
+                    </button>
+                    <div
+                      className="modal fade"
+                      id="formmodal"
+                      tabIndex={-1}
+                      aria-labelledby="exampleModalLabel"
+                      aria-hidden="true"
+                    >
+                      <div className="modal-dialog">
+                        <div className="modal-content">
+                          <div className="modal-header">
+                            <h6 className="modal-title" id="exampleModalLabel">
+                              New message
+                            </h6>
+                            <button
+                              type="button"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                              aria-label="Close"
+                            />
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingborderprimaryTwo"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#primaryBorderTwo"
-                            aria-expanded="false"
-                            aria-controls="primaryBorderTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="primaryBorderTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingborderprimaryTwo"
-                          data-bs-parent="#accordionprimaryborderExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                          <div className="modal-body">
+                            <form>
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="recipient-name"
+                                  className="col-form-label"
+                                >
+                                  Recipient:
+                                </label>
+                                <input
+                                  type="text"
+                                  className="form-control"
+                                  id="recipient-name"
+                                />
+                              </div>
+                              <div className="mb-3">
+                                <label
+                                  htmlFor="message-text"
+                                  className="col-form-label"
+                                >
+                                  Message:
+                                </label>
+                                <textarea
+                                  className="form-control"
+                                  id="message-text"
+                                  defaultValue={""}
+                                />
+                              </div>
+                            </form>
                           </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingborderprimaryThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#primaryBorderThree"
-                            aria-expanded="false"
-                            aria-controls="primaryBorderThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="primaryBorderThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingborderprimaryThree"
-                          data-bs-parent="#accordionprimaryborderExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
+                          <div className="modal-footer">
+                            <button
+                              type="button"
+                              className="btn btn-secondary"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
+                            <button type="button" className="btn btn-primary">
+                              Send message
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -5316,397 +5470,65 @@ export default function Accordions_collpase() {
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion accordion-border-primary
-                        accordions-items-seperate"{"\n"}
-                        {"    "}id="accordionprimaryborderExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingborderprimaryOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}data-bs-target="#primaryBorderOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}aria-controls="primaryBorderOne"&gt;
-                        {"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="primaryBorderOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingborderprimaryOne"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionprimaryborderExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
+                        &lt;button type="button" class="btn btn-primary mb-1"
+                        data-bs-toggle="modal"{"\n"}
+                        {"    "}data-bs-target="#formmodal"
+                        data-bs-whatever="@mdo"&gt;Open modal for{"\n"}
+                        {"    "}@mdo&lt;/button&gt;{"\n"}&lt;button
+                        type="button" class="btn btn-secondary mb-1"
+                        data-bs-toggle="modal"{"\n"}
+                        data-bs-target="#formmodal"
+                        data-bs-whatever="@fat"&gt;Open modal for{"\n"}
+                        @fat&lt;/button&gt;{"\n"}&lt;button type="button"
+                        class="btn btn-light mb-1" data-bs-toggle="modal"{"\n"}
+                        data-bs-target="#formmodal"
+                        data-bs-whatever="@getbootstrap"&gt;Open modal for{"\n"}
+                        @getbootstrap&lt;/button&gt;{"\n"}&lt;div class="modal
+                        fade" id="formmodal" tabindex="-1"{"\n"}
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"&gt;
+                        {"\n"}&lt;div class="modal-dialog"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-content"&gt;{"\n"}
+                        {"        "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"            "}&lt;h6 class="modal-title"
+                        id="exampleModalLabel"&gt;New message&lt;/h6&gt;{"\n"}
+                        {"            "}&lt;button type="button"
+                        class="btn-close" data-bs-dismiss="modal"{"\n"}
                         {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
+                        aria-label="Close"&gt;&lt;/button&gt;
+                        {"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingborderprimaryTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#primaryBorderTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="primaryBorderTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="primaryBorderTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingborderprimaryTwo"
+                        {"        "}&lt;div class="modal-body"&gt;{"\n"}
+                        {"            "}&lt;form&gt;{"\n"}
+                        {"                "}&lt;div class="mb-3"&gt;{"\n"}
+                        {"                    "}&lt;label for="recipient-name"
                         {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionprimaryborderExample"&gt;
+                        {"                        "}
+                        class="col-form-label"&gt;Recipient:&lt;/label&gt;{"\n"}
+                        {"                    "}&lt;input type="text"
+                        class="form-control" id="recipient-name"&gt;{"\n"}
+                        {"                "}&lt;/div&gt;{"\n"}
+                        {"                "}&lt;div class="mb-3"&gt;{"\n"}
+                        {"                    "}&lt;label for="message-text"
                         {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
+                        {"                        "}
+                        class="col-form-label"&gt;Message:&lt;/label&gt;{"\n"}
+                        {"                    "}&lt;textarea
+                        class="form-control"
+                        id="message-text"&gt;&lt;/textarea&gt;{"\n"}
+                        {"                "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;/form&gt;{"\n"}
+                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"            "}&lt;button type="button" class="btn
+                        btn-secondary"{"\n"}
                         {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
+                        data-bs-dismiss="modal"&gt;Close&lt;/button&gt;{"\n"}
+                        {"            "}&lt;button type="button" class="btn
+                        btn-primary"&gt;Send{"\n"}
+                        {"                "}message&lt;/button&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingborderprimaryThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#primaryBorderThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="primaryBorderThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="primaryBorderThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingborderprimaryThree"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionprimaryborderExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
-                      </code>
-                    </pre>
-                    {/* Prism Code */}
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-6">
-                <div className="card custom-card">
-                  <div className="card-header justify-content-between">
-                    <div className="card-title">Success</div>
-                    <div className="prism-toggle">
-                      <button className="btn btn-sm btn-primary-light">
-                        Show Code
-                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="card-body">
-                    <div
-                      className="accordion accordion-border-success accordions-items-seperate"
-                      id="accordionsuccessborderExample"
-                    >
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingbordersuccessOne"
-                        >
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#successBorderOne"
-                            aria-expanded="true"
-                            aria-controls="successBorderOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="successBorderOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingbordersuccessOne"
-                          data-bs-parent="#accordionsuccessborderExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingbordersuccessTwo"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#successBorderTwo"
-                            aria-expanded="false"
-                            aria-controls="successBorderTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="successBorderTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingbordersuccessTwo"
-                          data-bs-parent="#accordionsuccessborderExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingbordersuccessThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#successBorderThree"
-                            aria-expanded="false"
-                            aria-controls="successBorderThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="successBorderThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingbordersuccessThree"
-                          data-bs-parent="#accordionsuccessborderExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-footer d-none border-top-0">
-                    {/* Prism Code */}
-                    <pre className="language-html">
-                      <code className="language-html">
-                        &lt;div class="accordion accordion-border-success
-                        accordions-items-seperate"{"\n"}
-                        {"    "}id="accordionsuccessborderExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingbordersuccessOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}data-bs-target="#successBorderOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}aria-controls="successBorderOne"&gt;
-                        {"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="successBorderOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingbordersuccessOne"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionsuccessborderExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingbordersuccessTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#successBorderTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="successBorderTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="successBorderTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingbordersuccessTwo"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionsuccessborderExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingbordersuccessThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#successBorderThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="successBorderThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="successBorderThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingbordersuccessThree"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordionsuccessborderExample"&gt;
-                        {"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;/div&gt;
                       </code>
                     </pre>
                     {/* Prism Code */}
@@ -5717,10 +5539,10 @@ export default function Accordions_collpase() {
             {/* End:: row-5 */}
             {/* Start:: row-6 */}
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-12">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">Left Aligned Icons</div>
+                    <div className="card-title">Modal Animation Effects</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -5729,113 +5551,156 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
-                    <div
-                      className="accordion accordionicon-left accordions-items-seperate"
-                      id="accordioniconLeftExample"
-                    >
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingleftOne">
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseleftOne"
-                            aria-expanded="true"
-                            aria-controls="collapseleftOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseleftOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingleftOne"
-                          data-bs-parent="#accordioniconLeftExample"
+                    <div className="row ">
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-scale"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
                         >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
+                          Scale
+                        </a>
                       </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingleftTwo">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseLeftTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseLeftTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseLeftTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingleftTwo"
-                          data-bs-parent="#accordioniconLeftExample"
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-slide-in-right"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
                         >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the second item's accordion body.
-                            </strong>{" "}
-                            It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
-                          </div>
-                        </div>
+                          Slide In Right
+                        </a>
                       </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingleftThree">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseLeftThree"
-                            aria-expanded="false"
-                            aria-controls="collapseLeftThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseLeftThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingleftThree"
-                          data-bs-parent="#accordioniconLeftExample"
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-slide-in-bottom"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
                         >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the third item's accordion body.
-                            </strong>{" "}
-                            It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
+                          Slide In Bottom
+                        </a>
+                      </div>
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-newspaper"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
+                        >
+                          Newspaper
+                        </a>
+                      </div>
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-fall"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
+                        >
+                          Fall
+                        </a>
+                      </div>
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-flip-horizontal"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
+                        >
+                          Flip Horizontal
+                        </a>
+                      </div>
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-flip-vertical"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
+                        >
+                          Flip Vertical
+                        </a>
+                      </div>
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-super-scaled"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
+                        >
+                          Super Scaled
+                        </a>
+                      </div>
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-sign"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
+                        >
+                          Sign
+                        </a>
+                      </div>
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-rotate-bottom"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
+                        >
+                          Rotate Bottom
+                        </a>
+                      </div>
+                      <div className="col-sm-6 col-md-4 col-xl-3">
+                        <a
+                          className="modal-effect btn btn-primary d-grid mb-3"
+                          data-bs-effect="effect-rotate-left"
+                          data-bs-toggle="modal"
+                          href="#modaldemo8"
+                        >
+                          Rotate Left
+                        </a>
+                      </div>
+                    </div>
+                    <div className="modal fade" id="modaldemo8">
+                      <div
+                        className="modal-dialog modal-dialog-centered text-center"
+                        role="document"
+                      >
+                        <div className="modal-content modal-content-demo">
+                          <div className="modal-header">
+                            <h6 className="modal-title">Message Preview</h6>
+                            <button
+                              aria-label="Close"
+                              className="btn-close"
+                              data-bs-dismiss="modal"
+                            />
+                          </div>
+                          <div className="modal-body text-start">
+                            <h6>
+                              Why We Use Electoral College, Not Popular Vote
+                            </h6>
+                            <p className="text-muted mb-0">
+                              It is a long established fact that a reader will
+                              be distracted by the readable content of a page
+                              when looking at its layout. The point of using
+                              Lorem Ipsum is that it has a more-or-less normal
+                              distribution of letters, as opposed to using
+                              'Content here, content here', making it look like
+                              readable English.
+                            </p>
+                          </div>
+                          <div className="modal-footer">
+                            <button className="btn btn-primary">
+                              Save changes
+                            </button>{" "}
+                            <button
+                              className="btn btn-light"
+                              data-bs-dismiss="modal"
+                            >
+                              Close
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -5845,368 +5710,118 @@ export default function Accordions_collpase() {
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion accordionicon-left
-                        accordions-items-seperate"{"\n"}
-                        {"    "}id="accordioniconLeftExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingleftOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}data-bs-target="#collapseleftOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}aria-controls="collapseleftOne"&gt;
+                        &lt;div class="row "&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
                         {"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseleftOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}aria-labelledby="headingleftOne"
-                        data-bs-parent="#accordioniconLeftExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-scale"
+                        data-bs-toggle="modal"
+                        href="#modaldemo8"&gt;Scale&lt;/a&gt;{"\n"}
                         {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingleftTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseLeftTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapseLeftTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseLeftTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingleftTwo"
-                        data-bs-parent="#accordioniconLeftExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the second
-                        item's accordion body.&lt;/strong&gt; It is hidden{"\n"}
-                        {"                "}by default, until the collapse
-                        plugin adds the appropriate classes that{"\n"}
-                        {"                "}we use to style each element. These
-                        classes control the overall{"\n"}
-                        {"                "}appearance, as well as the showing
-                        and hiding via CSS transitions. You{"\n"}
-                        {"                "}can modify any of this with custom
-                        CSS or overriding our default{"\n"}
-                        {"                "}variables. It's also worth noting
-                        that just about any HTML can go within{"\n"}
-                        {"                "}the
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit{"\n"}
-                        {"                "}overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingleftThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseLeftThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapseLeftThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapseLeftThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingleftThree"{"\n"}
-                        {"            "}
-                        data-bs-parent="#accordioniconLeftExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the third
-                        item's accordion body.&lt;/strong&gt; It is hidden{"\n"}
-                        {"                "}by default, until the collapse
-                        plugin adds the appropriate classes that{"\n"}
-                        {"                "}we use to style each element. These
-                        classes control the overall{"\n"}
-                        {"                "}appearance, as well as the showing
-                        and hiding via CSS transitions. You{"\n"}
-                        {"                "}can modify any of this with custom
-                        CSS or overriding our default{"\n"}
-                        {"                "}variables. It's also worth noting
-                        that just about any HTML can go within{"\n"}
-                        {"                "}the
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit{"\n"}
-                        {"                "}overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
-                      </code>
-                    </pre>
-                    {/* Prism Code */}
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-6">
-                <div className="card custom-card">
-                  <div className="card-header justify-content-between">
-                    <div className="card-title">Without Icon</div>
-                    <div className="prism-toggle">
-                      <button className="btn btn-sm btn-primary-light">
-                        Show Code
-                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="card-body">
-                    <div
-                      className="accordion accordionicon-none accordions-items-seperate"
-                      id="accordioniconnoIconExample"
-                    >
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingnoIconOne">
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsenoIconOne"
-                            aria-expanded="true"
-                            aria-controls="collapsenoIconOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsenoIconOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingnoIconOne"
-                          data-bs-parent="#accordioniconnoIconExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingnoIconTwo">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsenoIconTwo"
-                            aria-expanded="false"
-                            aria-controls="collapsenoIconTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsenoIconTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingnoIconTwo"
-                          data-bs-parent="#accordioniconnoIconExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the second item's accordion body.
-                            </strong>{" "}
-                            It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingnoIconThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsenoIconThree"
-                            aria-expanded="false"
-                            aria-controls="collapsenoIconThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsenoIconThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingnoIconThree"
-                          data-bs-parent="#accordioniconnoIconExample"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the third item's accordion body.
-                            </strong>{" "}
-                            It is hidden by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the <code>.accordion-body</code>, though the
-                            transition does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-footer d-none border-top-0">
-                    {/* Prism Code */}
-                    <pre className="language-html">
-                      <code className="language-html">
-                        &lt;div class="accordion accordionicon-none
-                        accordions-items-seperate"{"\n"}
-                        {"    "}id="accordioniconnoIconExample"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingnoIconOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}data-bs-target="#collapsenoIconOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}
-                        aria-controls="collapsenoIconOne"&gt;
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
                         {"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsenoIconOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}aria-labelledby="headingnoIconOne"{"\n"}
-                        {"            "}
-                        data-bs-parent="#accordioniconnoIconExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-slide-in-right"
+                        data-bs-toggle="modal" href="#modaldemo8"&gt;Slide In
+                        Right&lt;/a&gt;{"\n"}
                         {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingnoIconTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapsenoIconTwo"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapsenoIconTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsenoIconTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingnoIconTwo"{"\n"}
-                        {"            "}
-                        data-bs-parent="#accordioniconnoIconExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the second
-                        item's accordion body.&lt;/strong&gt; It is hidden{"\n"}
-                        {"                "}by default, until the collapse
-                        plugin adds the appropriate classes that{"\n"}
-                        {"                "}we use to style each element. These
-                        classes control the overall{"\n"}
-                        {"                "}appearance, as well as the showing
-                        and hiding via CSS transitions. You{"\n"}
-                        {"                "}can modify any of this with custom
-                        CSS or overriding our default{"\n"}
-                        {"                "}variables. It's also worth noting
-                        that just about any HTML can go within{"\n"}
-                        {"                "}the
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit{"\n"}
-                        {"                "}overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingnoIconThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapsenoIconThree"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapsenoIconThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsenoIconThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingnoIconThree"
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
                         {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordioniconnoIconExample"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the third
-                        item's accordion body.&lt;/strong&gt; It is hidden{"\n"}
-                        {"                "}by default, until the collapse
-                        plugin adds the appropriate classes that{"\n"}
-                        {"                "}we use to style each element. These
-                        classes control the overall{"\n"}
-                        {"                "}appearance, as well as the showing
-                        and hiding via CSS transitions. You{"\n"}
-                        {"                "}can modify any of this with custom
-                        CSS or overriding our default{"\n"}
-                        {"                "}variables. It's also worth noting
-                        that just about any HTML can go within{"\n"}
-                        {"                "}the
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit{"\n"}
-                        {"                "}overflow.{"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-slide-in-bottom"
+                        data-bs-toggle="modal" href="#modaldemo8"&gt;Slide In
+                        Bottom&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
+                        {"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-newspaper"
+                        data-bs-toggle="modal"
+                        href="#modaldemo8"&gt;Newspaper&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
+                        {"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-fall"
+                        data-bs-toggle="modal"
+                        href="#modaldemo8"&gt;Fall&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
+                        {"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-flip-horizontal"
+                        data-bs-toggle="modal" href="#modaldemo8"&gt;Flip
+                        Horizontal&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
+                        {"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-flip-vertical"
+                        data-bs-toggle="modal" href="#modaldemo8"&gt;Flip
+                        Vertical&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
+                        {"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-super-scaled"
+                        data-bs-toggle="modal" href="#modaldemo8"&gt;Super
+                        Scaled&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
+                        {"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-sign"
+                        data-bs-toggle="modal"
+                        href="#modaldemo8"&gt;Sign&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
+                        {"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-rotate-bottom"
+                        data-bs-toggle="modal" href="#modaldemo8"&gt;Rotate
+                        Bottom&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}
+                        {"    "}&lt;div class="col-sm-6 col-md-4 col-xl-3"&gt;
+                        {"\n"}
+                        {"        "}&lt;a class="modal-effect btn btn-primary
+                        d-grid mb-3" data-bs-effect="effect-rotate-left"
+                        data-bs-toggle="modal" href="#modaldemo8"&gt;Rotate
+                        Left&lt;/a&gt;{"\n"}
+                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;{"\n"}&lt;div
+                        class="modal fade"{"  "}id="modaldemo8"&gt;{"\n"}
+                        {"    "}&lt;div class="modal-dialog
+                        modal-dialog-centered text-center" role="document"&gt;
+                        {"\n"}
+                        {"        "}&lt;div class="modal-content
+                        modal-content-demo"&gt;{"\n"}
+                        {"            "}&lt;div class="modal-header"&gt;{"\n"}
+                        {"                "}&lt;h6
+                        class="modal-title"&gt;Message
+                        Preview&lt;/h6&gt;&lt;button aria-label="Close"
+                        class="btn-close"
+                        data-bs-dismiss="modal"&gt;&lt;/button&gt;
+                        {"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-body
+                        text-start"&gt;
+                        {"\n"}
+                        {"                "}&lt;h6&gt;Why We Use Electoral
+                        College, Not Popular Vote&lt;/h6&gt;{"\n"}
+                        {"                "}&lt;p class="text-muted mb-0"&gt;It
+                        is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout. The point of using Lorem Ipsum is
+                        that it has a more-or-less normal distribution of
+                        letters, as opposed to using 'Content here, content
+                        here', making it look like readable English.&lt;/p&gt;
+                        {"\n"}
+                        {"            "}&lt;/div&gt;{"\n"}
+                        {"            "}&lt;div class="modal-footer"&gt;{"\n"}
+                        {"                "}&lt;button class="btn btn-primary"
+                        &gt;Save changes&lt;/button&gt; &lt;button class="btn
+                        btn-light" data-bs-dismiss="modal"
+                        &gt;Close&lt;/button&gt;
+                        {"\n"}
                         {"            "}&lt;/div&gt;{"\n"}
                         {"        "}&lt;/div&gt;{"\n"}
                         {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
@@ -6218,12 +5833,13 @@ export default function Accordions_collpase() {
               </div>
             </div>
             {/* End:: row-6 */}
-            {/* Start:: row-7 */}
+            {/* Start:: row-6 */}
+            <h6 className="mb-3">Close Buttons:</h6>
             <div className="row">
-              <div className="col-xl-6">
+              <div className="col-xl-4">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">Custom Icon Accordion</div>
+                    <div className="card-title">Basic Close</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -6232,262 +5848,28 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
-                    <div
-                      className="accordion accordion-customicon1 accordions-items-seperate"
-                      id="accordioncustomicon1Example"
-                    >
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingcustomicon1One"
-                        >
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsecustomicon1One"
-                            aria-expanded="true"
-                            aria-controls="collapsecustomicon1One"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsecustomicon1One"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="headingcustomicon1One"
-                          data-bs-parent="#accordioncustomicon1Example"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingcustomicon1Two"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsecustomicon1Two"
-                            aria-expanded="false"
-                            aria-controls="collapsecustomicon1Two"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsecustomicon1Two"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingcustomicon1Two"
-                          data-bs-parent="#accordioncustomicon1Example"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="headingcustomicon1Three"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapsecustomicon1Three"
-                            aria-expanded="false"
-                            aria-controls="collapsecustomicon1Three"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="collapsecustomicon1Three"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingcustomicon1Three"
-                          data-bs-parent="#accordioncustomicon1Example"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      aria-label="Close"
+                    />
                   </div>
                   <div className="card-footer d-none border-top-0">
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion accordion-customicon1
-                        accordions-items-seperate"
-                        id="accordioncustomicon1Example"&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingcustomicon1One"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}
-                        data-bs-target="#collapsecustomicon1One"
-                        aria-expanded="true"{"\n"}
-                        {"                "}
-                        aria-controls="collapsecustomicon1One"&gt;{"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsecustomicon1One"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}aria-labelledby="headingcustomicon1One"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordioncustomicon1Example"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingcustomicon1Two"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapsecustomicon1Two"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapsecustomicon1Two"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsecustomicon1Two"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="headingcustomicon1Two"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordioncustomicon1Example"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="headingcustomicon1Three"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button"{"\n"}
-                        {"                "}data-bs-toggle="collapse"
-                        data-bs-target="#collapsecustomicon1Three"{"\n"}
-                        {"                "}aria-expanded="false"
-                        aria-controls="collapsecustomicon1Three"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="collapsecustomicon1Three"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="headingcustomicon1Three"
-                        {"\n"}
-                        {"            "}
-                        data-bs-parent="#accordioncustomicon1Example"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        &lt;button type="button" class="btn-close"
+                        aria-label="Close"&gt;&lt;/button&gt;
                       </code>
                     </pre>
                     {/* Prism Code */}
                   </div>
                 </div>
               </div>
-              <div className="col-xl-6">
+              <div className="col-xl-4">
                 <div className="card custom-card">
                   <div className="card-header justify-content-between">
-                    <div className="card-title">Custom Accordion</div>
+                    <div className="card-title">Disabel state</div>
                     <div className="prism-toggle">
                       <button className="btn btn-sm btn-primary-light">
                         Show Code
@@ -6496,251 +5878,59 @@ export default function Accordions_collpase() {
                     </div>
                   </div>
                   <div className="card-body">
-                    <div
-                      className="accordion customized-accordion accordions-items-seperate"
-                      id="customizedAccordion"
-                    >
-                      <div className="accordion-item custom-accordion-primary">
-                        <h2
-                          className="accordion-header"
-                          id="customizedAccordionOne"
-                        >
-                          <button
-                            className="accordion-button"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#customized-AccordionOne"
-                            aria-expanded="true"
-                            aria-controls="customized-AccordionOne"
-                          >
-                            Accordion Item #1
-                          </button>
-                        </h2>
-                        <div
-                          id="customized-AccordionOne"
-                          className="accordion-collapse collapse show"
-                          aria-labelledby="customizedAccordionOne"
-                          data-bs-parent="#customizedAccordion"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item custom-accordion-secondary">
-                        <h2
-                          className="accordion-header"
-                          id="customizedAccordionTwo"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#customized-AccordionTwo"
-                            aria-expanded="false"
-                            aria-controls="customized-AccordionTwo"
-                          >
-                            Accordion Item #2
-                          </button>
-                        </h2>
-                        <div
-                          id="customized-AccordionTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="customizedAccordionTwo"
-                          data-bs-parent="#customizedAccordion"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item custom-accordion-danger">
-                        <h2
-                          className="accordion-header"
-                          id="customizedAccordionThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#customized-AccordionThree"
-                            aria-expanded="false"
-                            aria-controls="customized-AccordionThree"
-                          >
-                            Accordion Item #3
-                          </button>
-                        </h2>
-                        <div
-                          id="customized-AccordionThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="customizedAccordionThree"
-                          data-bs-parent="#customizedAccordion"
-                        >
-                          <div className="accordion-body">
-                            <strong>
-                              This is the first item's accordion body.
-                            </strong>{" "}
-                            It is shown by default, until the collapse plugin
-                            adds the appropriate classes that we use to style
-                            each element. These classes control the overall
-                            appearance, as well as the showing and hiding via
-                            CSS transitions. You can modify any of this with
-                            custom CSS or overriding our default variables. It's
-                            also worth noting that just about any HTML can go
-                            within the
-                            <code>.accordion-body</code>, though the transition
-                            does limit overflow.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <button
+                      type="button"
+                      className="btn-close"
+                      disabled=""
+                      aria-label="Close"
+                    />
                   </div>
                   <div className="card-footer d-none border-top-0">
                     {/* Prism Code */}
                     <pre className="language-html">
                       <code className="language-html">
-                        &lt;div class="accordion customized-accordion
-                        accordions-items-seperate" id="customizedAccordion"&gt;
+                        &lt;button type="button" class="btn-close" disabled
+                        aria-label="Close"&gt;&lt;/button&gt;
+                      </code>
+                    </pre>
+                    {/* Prism Code */}
+                  </div>
+                </div>
+              </div>
+              <div className="col-xl-4">
+                <div className="card custom-card overflow-hidden">
+                  <div className="card-header justify-content-between">
+                    <div className="card-title">White variant</div>
+                    <div className="prism-toggle">
+                      <button className="btn btn-sm btn-primary-light">
+                        Show Code
+                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
+                      </button>
+                    </div>
+                  </div>
+                  <div className="card-body bg-black">
+                    <button
+                      type="button"
+                      className="btn-close btn-close-white"
+                      aria-label="Close"
+                    />
+                    <button
+                      type="button"
+                      className="btn-close btn-close-white"
+                      disabled=""
+                      aria-label="Close"
+                    />
+                  </div>
+                  <div className="card-footer d-none border-top-0">
+                    {/* Prism Code */}
+                    <pre className="language-html">
+                      <code className="language-html">
+                        &lt;button type="button" class="btn-close
+                        btn-close-white" aria-label="Close"&gt;&lt;/button&gt;
                         {"\n"}
-                        {"    "}&lt;div class="accordion-item
-                        custom-accordion-primary"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="customizedAccordionOne"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}
-                        data-bs-target="#customized-AccordionOne"
-                        aria-expanded="true"{"\n"}
-                        {"                "}
-                        aria-controls="customized-AccordionOne"&gt;{"\n"}
-                        {"                "}Accordion Item #1{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="customized-AccordionOne"
-                        class="accordion-collapse collapse show"{"\n"}
-                        {"            "}aria-labelledby="customizedAccordionOne"
-                        data-bs-parent="#customizedAccordion"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item
-                        custom-accordion-secondary"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="customizedAccordionTwo"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}
-                        data-bs-target="#customized-AccordionTwo"
-                        aria-expanded="false"{"\n"}
-                        {"                "}
-                        aria-controls="customized-AccordionTwo"&gt;{"\n"}
-                        {"                "}Accordion Item #2{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="customized-AccordionTwo"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}aria-labelledby="customizedAccordionTwo"
-                        data-bs-parent="#customizedAccordion"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="accordion-item
-                        custom-accordion-danger"&gt;{"\n"}
-                        {"        "}&lt;h2 class="accordion-header"
-                        id="customizedAccordionThree"&gt;{"\n"}
-                        {"            "}&lt;button class="accordion-button
-                        collapsed" type="button" data-bs-toggle="collapse"{"\n"}
-                        {"                "}
-                        data-bs-target="#customized-AccordionThree"
-                        aria-expanded="false"{"\n"}
-                        {"                "}
-                        aria-controls="customized-AccordionThree"&gt;{"\n"}
-                        {"                "}Accordion Item #3{"\n"}
-                        {"            "}&lt;/button&gt;{"\n"}
-                        {"        "}&lt;/h2&gt;{"\n"}
-                        {"        "}&lt;div id="customized-AccordionThree"
-                        class="accordion-collapse collapse"{"\n"}
-                        {"            "}
-                        aria-labelledby="customizedAccordionThree"
-                        data-bs-parent="#customizedAccordion"&gt;{"\n"}
-                        {"            "}&lt;div class="accordion-body"&gt;{"\n"}
-                        {"                "}&lt;strong&gt;This is the first
-                        item's accordion body.&lt;/strong&gt; It is shown by
-                        {"\n"}
-                        {"                "}default, until the collapse plugin
-                        adds the appropriate classes that we{"\n"}
-                        {"                "}use to style each element. These
-                        classes control the overall appearance,{"\n"}
-                        {"                "}as well as the showing and hiding
-                        via CSS transitions. You can modify{"\n"}
-                        {"                "}any of this with custom CSS or
-                        overriding our default variables. It's{"\n"}
-                        {"                "}also worth noting that just about
-                        any HTML can go within the{"\n"}
-                        {"                "}
-                        &lt;code&gt;.accordion-body&lt;/code&gt;, though the
-                        transition does limit overflow.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
+                        {"    "}&lt;button type="button" class="btn-close
+                        btn-close-white" disabled{"\n"}
+                        {"        "}aria-label="Close"&gt;&lt;/button&gt;
                       </code>
                     </pre>
                     {/* Prism Code */}
@@ -6748,302 +5938,7 @@ export default function Accordions_collpase() {
                 </div>
               </div>
             </div>
-            {/* End:: row-7 */}
-            {/* Start:: row-9 */}
-            <div className="row">
-              <div className="col-xl-6">
-                <div className="card custom-card">
-                  <div className="card-header justify-content-between">
-                    <div className="card-title">Example</div>
-                    <div className="prism-toggle">
-                      <button className="btn btn-sm btn-primary-light">
-                        Show Code
-                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="card-body">
-                    <p className="mb-0">
-                      <a
-                        className="btn btn-primary collapsed mb-2"
-                        data-bs-toggle="collapse"
-                        href="#collapseExample"
-                        role="button"
-                        aria-expanded="false"
-                        aria-controls="collapseExample"
-                      >
-                        Link with href
-                      </a>
-                      <button
-                        className="btn btn-secondary collapsed mb-2"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseExample"
-                        aria-expanded="false"
-                        aria-controls="collapseExample"
-                      >
-                        Button with data-bs-target
-                      </button>
-                    </p>
-                    <div className="collapse" id="collapseExample">
-                      <div className="card card-body mb-0">
-                        Some placeholder content for the collapse component.
-                        This panel is hidden by default but revealed when the
-                        user activates the relevant trigger.
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-footer d-none border-top-0">
-                    {/* Prism Code */}
-                    <pre className="language-html">
-                      <code className="language-html">
-                        &lt;p class="mb-0"&gt;{"\n"}
-                        {"    "}&lt;a class="btn btn-primary collapsed mb-2"
-                        data-bs-toggle="collapse"{"\n"}
-                        {"        "}href="#collapseExample" role="button"
-                        aria-expanded="false"{"\n"}
-                        {"        "}aria-controls="collapseExample"&gt;{"\n"}
-                        {"        "}Link with href{"\n"}
-                        {"    "}&lt;/a&gt;{"\n"}
-                        {"    "}&lt;button class="btn btn-secondary collapsed
-                        mb-2" type="button"{"\n"}
-                        {"        "}data-bs-toggle="collapse"
-                        data-bs-target="#collapseExample"{"\n"}
-                        {"        "}aria-expanded="false"
-                        aria-controls="collapseExample"&gt;{"\n"}
-                        {"        "}Button with data-bs-target{"\n"}
-                        {"    "}&lt;/button&gt;{"\n"}&lt;/p&gt;{"\n"}&lt;div
-                        class="collapse" id="collapseExample"&gt;{"\n"}
-                        {"    "}&lt;div class="card card-body mb-0"&gt;{"\n"}
-                        {"        "}Some placeholder content for the collapse
-                        component. This panel{"\n"}
-                        {"        "}is{"\n"}
-                        {"        "}hidden by default but revealed when the user
-                        activates the{"\n"}
-                        {"        "}relevant{"\n"}
-                        {"        "}trigger.{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
-                      </code>
-                    </pre>
-                    {/* Prism Code */}
-                  </div>
-                </div>
-              </div>
-              <div className="col-xl-6">
-                <div className="card custom-card">
-                  <div className="card-header justify-content-between">
-                    <div className="card-title">Targets Collapse</div>
-                    <div className="prism-toggle">
-                      <button className="btn btn-sm btn-primary-light">
-                        Show Code
-                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="card-body">
-                    <p className="mb-0">
-                      <a
-                        className="btn btn-primary mb-2"
-                        data-bs-toggle="collapse"
-                        href="#multiCollapseExample1"
-                        role="button"
-                        aria-expanded="false"
-                        aria-controls="multiCollapseExample1"
-                      >
-                        Toggle first element
-                      </a>
-                      <button
-                        className="btn btn-success mb-2"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#multiCollapseExample2"
-                        aria-expanded="false"
-                        aria-controls="multiCollapseExample2"
-                      >
-                        Toggle second element
-                      </button>
-                      <button
-                        className="btn btn-danger mb-2"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target=".multi-collapse"
-                        aria-expanded="false"
-                        aria-controls="multiCollapseExample1 multiCollapseExample2"
-                      >
-                        Toggle both elements
-                      </button>
-                    </p>
-                    <div className="row">
-                      <div className="col m-1">
-                        <div
-                          className="collapse multi-collapse"
-                          id="multiCollapseExample1"
-                        >
-                          <div className="card card-body mb-0 fs-12">
-                            Some placeholder content for the first collapse
-                            component of this multi-collapse example. This panel
-                            is hidden by default but revealed when the user
-                            activates the relevant trigger.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="col m-1">
-                        <div
-                          className="collapse multi-collapse"
-                          id="multiCollapseExample2"
-                        >
-                          <div className="card card-body mb-0 fs-12">
-                            Some placeholder content for the second collapse
-                            component of this multi-collapse example. This panel
-                            is hidden by default but revealed when the user
-                            activates the relevant trigger.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-footer d-none border-top-0">
-                    {/* Prism Code */}
-                    <pre className="language-html">
-                      <code className="language-html">
-                        &lt;p class="mb-0"&gt;{"\n"}
-                        {"    "}&lt;a class="btn btn-primary mb-2"
-                        data-bs-toggle="collapse"{"\n"}
-                        {"        "}href="#multiCollapseExample1" role="button"
-                        aria-expanded="false"{"\n"}
-                        {"        "}
-                        aria-controls="multiCollapseExample1"&gt;Toggle first
-                        element&lt;/a&gt;{"\n"}
-                        {"    "}&lt;button class="btn btn-success mb-2"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"        "}data-bs-target="#multiCollapseExample2"
-                        aria-expanded="false"{"\n"}
-                        {"        "}
-                        aria-controls="multiCollapseExample2"&gt;Toggle second
-                        {"\n"}
-                        {"        "}element&lt;/button&gt;{"\n"}
-                        {"    "}&lt;button class="btn btn-danger mb-2"
-                        type="button" data-bs-toggle="collapse"{"\n"}
-                        {"        "}data-bs-target=".multi-collapse"
-                        aria-expanded="false"{"\n"}
-                        {"        "}aria-controls="multiCollapseExample1
-                        multiCollapseExample2"&gt;Toggle{"\n"}
-                        {"        "}both elements&lt;/button&gt;{"\n"}&lt;/p&gt;
-                        {"\n"}&lt;div class="row"&gt;{"\n"}
-                        {"    "}&lt;div class="col m-1"&gt;{"\n"}
-                        {"        "}&lt;div class="collapse multi-collapse"
-                        id="multiCollapseExample1"&gt;{"\n"}
-                        {"            "}&lt;div class="card card-body mb-0"&gt;
-                        {"\n"}
-                        {"                "}Some placeholder content for the
-                        first collapse{"\n"}
-                        {"                "}component of{"\n"}
-                        {"                "}this multi-collapse example. This
-                        panel is hidden by{"\n"}
-                        {"                "}default{"\n"}
-                        {"                "}but revealed when the user activates
-                        the relevant{"\n"}
-                        {"                "}trigger.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;div class="col m-1"&gt;{"\n"}
-                        {"        "}&lt;div class="collapse multi-collapse"
-                        id="multiCollapseExample2"&gt;{"\n"}
-                        {"            "}&lt;div class="card card-body mb-0"&gt;
-                        {"\n"}
-                        {"                "}Some placeholder content for the
-                        second collapse{"\n"}
-                        {"                "}component{"\n"}
-                        {"                "}of this multi-collapse example. This
-                        panel is hidden by{"\n"}
-                        {"                "}default but revealed when the user
-                        activates the{"\n"}
-                        {"                "}relevant{"\n"}
-                        {"                "}trigger.{"\n"}
-                        {"            "}&lt;/div&gt;{"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
-                      </code>
-                    </pre>
-                    {/* Prism Code */}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* End:: row-9 */}
-            {/*ROW-START*/}
-            <div className="row">
-              <div className="col-xl-6">
-                <div className="card custom-card">
-                  <div className="card-header justify-content-between">
-                    <div className="card-title">Horizontal Collapse</div>
-                    <div className="prism-toggle">
-                      <button className="btn btn-sm btn-primary-light">
-                        Show Code
-                        <i className="ri-code-line ms-2 d-inline-block align-middle" />
-                      </button>
-                    </div>
-                  </div>
-                  <div className="card-body">
-                    <p>
-                      <button
-                        className="btn btn-primary"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#collapseWidthExample"
-                        aria-expanded="false"
-                        aria-controls="collapseWidthExample"
-                      >
-                        Toggle width collapse
-                      </button>
-                    </p>
-                    <div style={{ minHeight: 120 }}>
-                      <div
-                        className="collapse collapse-horizontal"
-                        id="collapseWidthExample"
-                      >
-                        <div className="card card-body" style={{ width: 230 }}>
-                          This is some placeholder content for a horizontal
-                          collapse. It's hidden by default and shown when
-                          triggered.
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="card-footer d-none border-top-0">
-                    {/* Prism Code */}
-                    <pre className="language-html">
-                      <code className="language-html">
-                        &lt;p&gt;{"\n"}
-                        {"    "}&lt;button class="btn btn-primary" type="button"
-                        data-bs-toggle="collapse"{"\n"}
-                        {"        "}data-bs-target="#collapseWidthExample"
-                        aria-expanded="false"{"\n"}
-                        {"        "}aria-controls="collapseWidthExample"&gt;
-                        {"\n"}
-                        {"        "}Toggle width collapse{"\n"}
-                        {"    "}&lt;/button&gt;{"\n"}&lt;/p&gt;{"\n"}&lt;div
-                        style="min-height: 120px;"&gt;{"\n"}
-                        {"    "}&lt;div class="collapse collapse-horizontal"
-                        id="collapseWidthExample"&gt;{"\n"}
-                        {"        "}&lt;div class="card card-body" style="width:
-                        230px;"&gt;{"\n"}
-                        {"            "}This is some placeholder content for a
-                        horizontal collapse. It's{"\n"}
-                        {"            "}hidden{"\n"}
-                        {"            "}by default and shown when triggered.
-                        {"\n"}
-                        {"        "}&lt;/div&gt;{"\n"}
-                        {"    "}&lt;/div&gt;{"\n"}&lt;/div&gt;
-                      </code>
-                    </pre>
-                    {/* Prism Code */}
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/*ROW-END*/}
+            {/* End:: row-6 */}
           </div>
         </div>
         {/*APP-CONTENT CLOSE*/}
@@ -7755,6 +6650,41 @@ export default function Accordions_collpase() {
       </div>
       <div id="responsive-overlay" />
       {/* Scroll To Top */}
+
+      {/* <!-- Popper JS --> */}
+      <Script src="/assets/libs/@popperjs/core/umd/popper.min.js"></Script>
+
+      {/* <!-- Bootstrap JS --> */}
+      <Script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></Script>
+
+      {/* <!-- Defaultmenu JS --> */}
+      <Script src="/assets/js/defaultmenu.min.js"></Script>
+
+      {/* <!-- Node Waves JS--> */}
+      <Script src="/assets/libs/node-waves/waves.min.js"></Script>
+
+      {/* <!-- Sticky JS --> */}
+      <Script src="/assets/js/sticky.js"></Script>
+
+      {/* <!-- Simplebar JS --> */}
+      <Script src="/assets/libs/simplebar/simplebar.min.js"></Script>
+      <Script src="/assets/js/simplebar.js"></Script>
+
+      {/* <!-- Color Picker JS --> */}
+      <Script src="/assets/libs/@simonwep/pickr/pickr.es5.min.js"></Script>
+
+      {/* <!-- Custom-Switcher JS --> */}
+      <Script src="/assets/js/custom-switcher.min.js"></Script>
+
+      {/* <!-- Prism JS --> */}
+      <Script src="/assets/libs/prismjs/prism.js"></Script>
+      <Script src="/assets/js/prism-custom.js"></Script>
+
+      {/* <!-- Modal JS --> */}
+      <Script src="/assets/js/modal.js"></Script>
+
+      {/* <!-- Custom JS --> */}
+      <Script src="/assets/js/custom.js"></Script>
     </>
   );
 }

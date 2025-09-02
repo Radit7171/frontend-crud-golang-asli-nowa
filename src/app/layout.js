@@ -1,6 +1,6 @@
 /* eslint-disable */
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+// import "./globals.css";
 import Script from "next/script";
 
 const geistSans = Geist({
@@ -57,9 +57,15 @@ export default function RootLayout({ children }) {
         {/* Node Waves Css */}
         <link href="/assets/libs/node-waves/waves.min.css" rel="stylesheet" />
         {/* Simplebar Css */}
-        <link href="/assets/libs/simplebar/simplebar.min.css" rel="stylesheet" />
+        <link
+          href="/assets/libs/simplebar/simplebar.min.css"
+          rel="stylesheet"
+        />
         {/* Color Picker Css */}
-        <link rel="/stylesheet" href="assets/libs/flatpickr/flatpickr.min.css" />
+        <link
+          rel="/stylesheet"
+          href="assets/libs/flatpickr/flatpickr.min.css"
+        />
         <link
           rel="stylesheet"
           href="/assets/libs/@simonwep/pickr/themes/nano.min.css"
@@ -108,6 +114,23 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="/assets/libs/prismjs/themes/prism-coy.min.css"
         />
+
+        <link rel="stylesheet" href="/assets/libs/dragula/dragula.min.css" />
+
+        <link
+          rel="stylesheet"
+          href="/assets/libs/swiper/swiper-bundle.min.css"
+        />
+
+        {/* GLightbox CSS */}
+        <link
+          rel="stylesheet"
+          href="/assets/libs/glightbox/css/glightbox.min.css"
+        />
+
+        <link rel="stylesheet" href="../assets/libs/quill/quill.snow.css" />
+        <link rel="stylesheet" href="../assets/libs/quill/quill.bubble.css" />
+        <link rel="stylesheet" href="../assets/libs/dropzone/dropzone.css" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
@@ -116,10 +139,13 @@ export default function RootLayout({ children }) {
         <Script src="/assets/libs/choices.js/public/assets/scripts/choices.min.js"></Script>
         <Script src="/assets/js/main.js"></Script>
         {/* <!-- Popper JS --> */}
-        <Script src="/assets/libs/@popperjs/core/umd/popper.min.js"></Script>
+        {/* <Script src="/assets/libs/@popperjs/core/umd/popper.min.js"></Script> */}
 
         {/* <!-- Bootstrap JS --> */}
-        <Script src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"></Script>
+        <Script
+          src="/assets/libs/bootstrap/js/bootstrap.bundle.min.js"
+          strategy="afterInteractive"
+        ></Script>
 
         {/* <!-- Defaultmenu JS --> */}
         <Script src="/assets/js/defaultmenu.min.js"></Script>
