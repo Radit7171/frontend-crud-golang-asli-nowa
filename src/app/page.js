@@ -2613,9 +2613,9 @@ export default function Home() {
                     </Link>
                   </li>
                   <li className="slide">
-                    <a href="settings.html" className="side-menu__item">
+                    <Link href="/settings" className="side-menu__item">
                       Settings
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide has-sub">
                     <a href="#;" className="side-menu__item">
@@ -2624,59 +2624,59 @@ export default function Home() {
                     </a>
                     <ul className="slide-menu child2">
                       <li className="slide">
-                        <a href="mail.html" className="side-menu__item">
+                        <Link href="/Mail/mail" className="side-menu__item">
                           Mail
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="mail-compose.html" className="side-menu__item">
+                        <Link href="/Mail/mail-compose" className="side-menu__item">
                           Mail-compose
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="mail-read.html" className="side-menu__item">
+                        <Link href="/Mail/mail-read" className="side-menu__item">
                           Read-mail
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="mail-settings.html"
+                        <Link
+                          href="/Mail/mail-settings"
                           className="side-menu__item"
                         >
                           Mail-settings
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a href="chat.html" className="side-menu__item">
+                        <Link href="/Mail/chat" className="side-menu__item">
                           Chat
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li className="slide">
-                    <a href="invoice.html" className="side-menu__item">
+                    <Link href="/invoice" className="side-menu__item">
                       Invoice
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="pricing.html" className="side-menu__item">
+                    <Link href="/pricing" className="side-menu__item">
                       Pricing
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="todotask.html" className="side-menu__item">
+                    <Link href="/todotask" className="side-menu__item">
                       Todo Task
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="faq.html" className="side-menu__item">
+                    <Link href="/faq" className="side-menu__item">
                       Faqs
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="empty.html" className="side-menu__item">
+                    <Link href="/empty" className="side-menu__item">
                       Empty page
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -2702,54 +2702,54 @@ export default function Home() {
                     <a href="#">Utilities</a>
                   </li>
                   <li className="slide">
-                    <a href="avatars.html" className="side-menu__item">
+                    <Link href="/avatars" className="side-menu__item">
                       Avatars
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="borders.html" className="side-menu__item">
+                    <Link href="/borders" className="side-menu__item">
                       Borders
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="breakpoints.html" className="side-menu__item">
+                    <Link href="/breakpoints" className="side-menu__item">
                       Breakpoints
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="colors.html" className="side-menu__item">
+                    <Link href="/colors" className="side-menu__item">
                       Colors
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="columns.html" className="side-menu__item">
+                    <Link href="/columns" className="side-menu__item">
                       Columns
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="flex.html" className="side-menu__item">
+                    <Link href="/flex" className="side-menu__item">
                       Flex
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="gutters.html" className="side-menu__item">
+                    <Link href="/gutters" className="side-menu__item">
                       Gutters
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="helpers.html" className="side-menu__item">
+                    <Link href="/helpers" className="side-menu__item">
                       Helpers
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="position.html" className="side-menu__item">
+                    <Link href="/position" className="side-menu__item">
                       Position
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="more.html" className="side-menu__item">
+                    <Link href="/more" className="side-menu__item">
                       Additional Content
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -2761,7 +2761,7 @@ export default function Home() {
               {/* End::slide__category */}
               {/* Start::slide */}
               <li className="slide">
-                <a href="icons.html" className="side-menu__item">
+                <Link href="/icons" className="side-menu__item">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="side-menu__icon"
@@ -2772,7 +2772,7 @@ export default function Home() {
                     <path d="M20 7h-1.209A4.92 4.92 0 0 0 19 5.5C19 3.57 17.43 2 15.5 2c-1.622 0-2.705 1.482-3.404 3.085C11.407 3.57 10.269 2 8.5 2 6.57 2 5 3.57 5 5.5c0 .596.079 1.089.209 1.5H4c-1.103 0-2 .897-2 2v2c0 1.103.897 2 2 2v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7c1.103 0 2-.897 2-2V9c0-1.103-.897-2-2-2zm-4.5-3c.827 0 1.5.673 1.5 1.5C17 7 16.374 7 16 7h-2.478c.511-1.576 1.253-3 1.978-3zM7 5.5C7 4.673 7.673 4 8.5 4c.888 0 1.714 1.525 2.198 3H8c-.374 0-1 0-1-1.5zM4 9h7v2H4V9zm2 11v-7h5v7H6zm12 0h-5v-7h5v7zm-5-9V9.085L13.017 9H20l.001 2H13z" />
                   </svg>
                   <span className="side-menu__label">Icons</span>
-                </a>
+                </Link>
               </li>
               {/* End::slide */}
               <li className="slide has-sub">
@@ -2800,152 +2800,152 @@ export default function Home() {
                     </a>
                     <ul className="slide-menu child2">
                       <li className="slide">
-                        <a
-                          href="apex-line-charts.html"
+                        <Link
+                          href="/Apex-charts/apex-line-charts"
                           className="side-menu__item"
                         >
                           Line Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="apex-area-charts.html"
+                        <Link
+                          href="/Apex-charts/apex-area-charts"
                           className="side-menu__item"
                         >
                           Area Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="apex-column-charts.html"
+                        <Link
+                          href="/Apex-charts/apex-column-charts"
                           className="side-menu__item"
                         >
                           Column Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="apex-bar-charts.html"
+                        <Link
+                          href="/Apex-charts/apex-bar-charts"
                           className="side-menu__item"
                         >
                           Bar Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="apex-mixed-charts.html"
+                        <Link
+                          href="/Apex-charts/apex-mixed-charts"
                           className="side-menu__item"
                         >
                           Mixed Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="apex-rangearea-charts.html"
+                        <Link
+                          href="/Apex-charts/apex-rangearea-charts"
                           className="side-menu__item"
                         >
                           Rangearea Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="apex-timeline-charts.html"
+                        <Link
+                          href="/Apex-charts/apex-timeline-charts"
                           className="side-menu__item"
                         >
                           Timeline Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
-                          href="apex-candlestick-charts.html"
+                        <Link
+                          href="/Apex-charts/apex-candlestick-charts"
                           className="side-menu__item"
                         >
                           Candlestick Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-boxplot-charts.html"
                           className="side-menu__item"
                         >
                           Boxplot Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-bubble-charts.html"
                           className="side-menu__item"
                         >
                           Bubble Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-scatter-charts.html"
                           className="side-menu__item"
                         >
                           Scatter Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-heatmap-charts.html"
                           className="side-menu__item"
                         >
                           Heatmap Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-treemap-charts.html"
                           className="side-menu__item"
                         >
                           Treemap Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-pie-charts.html"
                           className="side-menu__item"
                         >
                           Pie Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-radialbar-charts.html"
                           className="side-menu__item"
                         >
                           Radialbar Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-radar-charts.html"
                           className="side-menu__item"
                         >
                           Radar Charts
-                        </a>
+                        </Link>
                       </li>
                       <li className="slide">
-                        <a
+                        <Link
                           href="apex-polararea-charts.html"
                           className="side-menu__item"
                         >
                           Polararea Charts
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </li>
                   <li className="slide">
-                    <a href="chartjs-charts.html" className="side-menu__item">
+                    <Link href="chartjs-charts.html" className="side-menu__item">
                       ChartJs Charts
-                    </a>
+                    </Link>
                   </li>
                   <li className="slide">
-                    <a href="echarts.html" className="side-menu__item">
+                    <Link href="echarts.html" className="side-menu__item">
                       Echart Charts
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               </li>

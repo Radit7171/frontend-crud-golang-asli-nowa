@@ -128,9 +128,13 @@ export default function RootLayout({ children }) {
           href="/assets/libs/glightbox/css/glightbox.min.css"
         />
 
-        <link rel="stylesheet" href="../assets/libs/quill/quill.snow.css" />
-        <link rel="stylesheet" href="../assets/libs/quill/quill.bubble.css" />
-        <link rel="stylesheet" href="../assets/libs/dropzone/dropzone.css" />
+        <link rel="stylesheet" href="/assets/libs/quill/quill.snow.css" />
+        
+        <link rel="stylesheet" href="/assets/libs/quill/quill.bubble.css" />
+
+        <link rel="stylesheet" href="/assets/libs/dropzone/dropzone.css" />
+        
+        <link rel="stylesheet" href="/assets/libs/apexcharts/apexcharts.css" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
